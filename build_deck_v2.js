@@ -2404,39 +2404,40 @@ makeDivider("08", "인증 & 안전성",
 
   const colW = [2.0, 4.0, 3.0];
   const colX = [0.5, 2.55, 6.6];
-  let y = 1.35;
+  let y = 1.25;
+  const rowH = 0.31;
 
   headers.forEach((h, ci) => {
     s.addShape(pres.shapes.RECTANGLE, {
-      x: colX[ci], y, w: colW[ci], h: 0.4,
+      x: colX[ci], y, w: colW[ci], h: 0.36,
       fill: { color: C.ink }, line: { color: C.ink }
     });
     s.addText(h, {
-      x: colX[ci] + 0.1, y, w: colW[ci] - 0.2, h: 0.4,
+      x: colX[ci] + 0.1, y, w: colW[ci] - 0.2, h: 0.36,
       fontSize: 11, color: C.gold, fontFace: FONT_H,
       bold: true, valign: "middle", charSpacing: 1, margin: 0
     });
   });
-  y += 0.4;
+  y += 0.36;
   rows.forEach((row, ri) => {
     const fill = ri % 2 === 0 ? C.creamSoft : C.white;
     row.forEach((cell, ci) => {
       s.addShape(pres.shapes.RECTANGLE, {
-        x: colX[ci], y, w: colW[ci], h: 0.35,
+        x: colX[ci], y, w: colW[ci], h: rowH,
         fill: { color: fill }, line: { color: C.line, width: 0.4 }
       });
       s.addText(cell, {
-        x: colX[ci] + 0.1, y, w: colW[ci] - 0.2, h: 0.35,
+        x: colX[ci] + 0.1, y, w: colW[ci] - 0.2, h: rowH,
         fontSize: 9.5, color: ci === 0 ? C.goldDeep : C.ink,
         fontFace: ci === 0 ? FONT_H : FONT_B,
         bold: ci === 0, valign: "middle", margin: 0
       });
     });
-    y += 0.35;
+    y += rowH;
   });
 
   s.addText("매니저 핵심 — 이 표만 외워두면, 고객이 어떤 안전 질문을 해도 답할 수 있습니다.", {
-    x: 0.5, y: 5.0, w: 9, h: 0.3,
+    x: 0.5, y: 4.95, w: 9, h: 0.3,
     fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
