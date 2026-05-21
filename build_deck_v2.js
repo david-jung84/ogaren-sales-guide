@@ -794,12 +794,12 @@ makeDivider("02", "매트리스 마스터하기",
 {
   const s = pres.addSlide();
   s.background = { color: C.white };
-  addSectionTitle(s, "MATTRESS · nooer", "누어 매트리스 — 탄/포/편 그리고 든든");
+  addSectionTitle(s, "MATTRESS · nooer", "누어 매트리스 — 편/포/탄 그리고 든든");
 
   const items = [
-    { img: "images/tantan.jpg", name: "탄탄히 누어", sub: "단단한 지지력", who: "허리 부담 있는 분\n단단함 선호" },
-    { img: "images/pogeun.jpg", name: "포근히 누어", sub: "간단 설치 · 압축포장", who: "1인가구, 빠른 배송\n간편함 선호" },
     { img: "images/pyeonan.jpg", name: "편안히 누어", sub: "오가닉 코튼 스프링", who: "친환경, 자연 소재\n중간 지지력" },
+    { img: "images/pogeun.jpg", name: "포근히 누어", sub: "간단 설치 · 압축포장", who: "1인가구, 빠른 배송\n간편함 선호" },
+    { img: "images/tantan.jpg", name: "탄탄히 누어", sub: "단단한 지지력", who: "허리 부담 있는 분\n단단함 선호" },
     { img: "images/topper.jpg", name: "든든 토퍼", sub: "프리미엄 린넨 토퍼", who: "기존 매트리스 업그레이드\n5cm 안락 추가" },
   ];
 
@@ -2688,7 +2688,7 @@ makeDivider("08", "인증 & 안전성",
     { t: "라돈 시험성적서", d: "한국 공인기관 통과\n전 라인업 (편/포/탄)" },
     { t: "원단 OEKO-TEX", d: "유해물질 미검출\n피부 직접 닿는 부위 안전" },
     { t: "솜 OEKO-TEX", d: "이탈리아 인증 (2021-22)\nCertificato OEKO-TEX" },
-    { t: "에어프로파일폼 밀도", d: "통기성 + 지지력 시험성적서\n포근히·편안히 코어 소재" },
+    { t: "에어프로파일폼 밀도", d: "통기성 + 지지력 시험성적서\n편안히·포근히 코어 소재" },
     { t: "패딩 형광 fiti", d: "형광물질 미검출 (2025)\n알레르기·아토피 안심" },
   ];
 
