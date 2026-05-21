@@ -196,7 +196,7 @@ console.log("✓ build_session1.js 생성 (", session1.split("\n").length, "line
 // 세션 2 빌드
 // ============================================================
 const cover2 = patchCover(get(SLIDE_MARKERS.SLIDE_1, SLIDE_MARKERS.SLIDE_2),
-  "세션 2", "그래서 잘 판다");
+  "세션 2", "그래서 잘 안내한다");
 const toc2 = patchToc(get(SLIDE_MARKERS.SLIDE_3, SLIDE_MARKERS.PART1_START), false);
 
 const S2_MAPPING = { "04": "01", "05": "02", "06": "03", "07": "04", "09": "05" };

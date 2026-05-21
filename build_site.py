@@ -355,7 +355,7 @@ def html_index(s1_count: int, s2_count: int, updated: str) -> str:
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>오가렌 매장 매니저 교육 · 세일즈 가이드</title>
-<meta name="description" content="오가렌 오프라인 쇼룸 매니저 교육과 세일즈 가이드. 우리는 그래서 잘 잔다, 그래서 잘 판다." />
+<meta name="description" content="오가렌 오프라인 쇼룸 매니저는 파는 사람이 아니라 수면 컨설턴트. 우리는 그래서 잘 잔다, 그래서 잘 안내한다." />
 <style>{CSS}</style>
 </head>
 <body>
@@ -371,9 +371,9 @@ def html_index(s1_count: int, s2_count: int, updated: str) -> str:
       <span class="kicker">Manager Education Program</span>
       <h1>
         잘 자는 사람이<br/>
-        <em>잘 판다.</em>
+        <em>잠을 바꾼다.</em>
       </h1>
-      <p class="lead">오프라인 쇼룸 매니저를 위한 통합 교육·세일즈 가이드. 제품을 깊이 이해하고, 고객의 한 마디 뒤에 숨은 결정을 읽고, 한 사람의 잠을 바꾸는 매장 운영.</p>
+      <p class="lead">오프라인 쇼룸 매니저는 파는 사람이 아니라 수면 컨설턴트입니다. 제품을 깊이 이해하고, 고객의 한 마디 뒤에 숨은 결정을 읽고, 한 사람의 잠을 바꾸는 매장 운영.</p>
       <div class="meta">
         <div><b>76</b> Slides</div>
         <div><b>2</b> Sessions</div>
@@ -411,8 +411,8 @@ def html_index(s1_count: int, s2_count: int, updated: str) -> str:
 
         <a class="session-card reveal" href="session2.html">
           <div class="num"><em>Session</em> 02</div>
-          <h3>그래서<br/><em>잘 판다.</em></h3>
-          <div class="desc">Sales · Service · Operation</div>
+          <h3>그래서<br/><em>잘 안내한다.</em></h3>
+          <div class="desc">Consulting · Service · Operation</div>
           <ul class="parts">
             <li><b>Part 01</b>고객 응대 프로세스</li>
             <li><b>Part 02</b>세일즈 스크립트 & 거절 처리</li>
@@ -446,7 +446,7 @@ def html_index(s1_count: int, s2_count: int, updated: str) -> str:
         </a>
         <a class="dl-item" href="assets/download/오가렌_세일즈가이드_세션2.pptx" download>
           <div class="lbl">Session 02 · PPTX</div>
-          <div class="name">그래서 잘 판다</div>
+          <div class="name">그래서 잘 안내한다</div>
           <div class="arrow">↓ Download</div>
         </a>
         <a class="dl-item" href="assets/download/오가렌_매니저_교육_세일즈_가이드_v2.1.pptx" download>
@@ -527,7 +527,7 @@ def html_session(session_name: str, session_label: str, subtitle: str, toc: list
 
     # 타이틀 파싱: "세션 1" → "Session 01", subtitle "우리는 그래서 잘 잔다" → 마지막 단어 italic
     session_num = session_label.replace("세션 ", "")
-    subtitle_em = re.sub(r"(잘\s*잔다|잘\s*판다)\.?", r"<em>\1.</em>", subtitle)
+    subtitle_em = re.sub(r"(잘\s*잔다|잘\s*판다|잘\s*안내한다|잠을\s*바꾼다)\.?", r"<em>\1.</em>", subtitle)
 
     return f"""<!doctype html>
 <html lang="ko">
@@ -620,7 +620,7 @@ def main():
         encoding="utf-8",
     )
     (SITE / "session2.html").write_text(
-        html_session("session2", "세션 2", "그래서 잘 판다",
+        html_session("session2", "세션 2", "그래서 잘 안내한다",
                      SESSION2_TOC, s2_titles, "assets/session2",
                      S2_PPT.name),
         encoding="utf-8",
