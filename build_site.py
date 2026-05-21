@@ -395,7 +395,7 @@ def html_index(s1_count: int, s2_count: int, updated: str) -> str:
       <div class="session-grid">
         <a class="session-card reveal" href="session1.html">
           <div class="num"><em>Session</em> 01</div>
-          <h3>우리는 그래서<br/><em>잘 잔다.</em></h3>
+          <h3>우리는<br/><em>잘 잔다.</em></h3>
           <div class="desc">Product · Certification · Safety</div>
           <ul class="parts">
             <li><b>Part 01</b>오가렌과 3대 브랜드</li>
