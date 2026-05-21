@@ -436,13 +436,13 @@ makeDivider("01", "오가렌과 3대 브랜드",
     });
     // 하단 흰 블록
     s.addShape(pres.shapes.RECTANGLE, {
-      x, y: y + 1.0, w: 2.9, h: 2.7,
+      x, y: y + 1.0, w: 2.9, h: 2.3,
       fill: { color: C.white }, line: { color: C.line, width: 0.5 }
     });
     s.addText(`"${b.tagline}"`, {
       x: x + 0.2, y: y + 1.1, w: 2.5, h: 0.4,
       fontSize: 16, color: b.color, fontFace: FONT_H,
-      bold: true, bold: true, margin: 0
+      bold: true, margin: 0
     });
     s.addText(b.target, {
       x: x + 0.2, y: y + 1.55, w: 2.5, h: 0.3,
@@ -450,13 +450,13 @@ makeDivider("01", "오가렌과 3대 브랜드",
       bold: true, charSpacing: 2, margin: 0
     });
     s.addText(b.desc, {
-      x: x + 0.2, y: y + 2.0, w: 2.5, h: 1.6,
+      x: x + 0.2, y: y + 1.95, w: 2.5, h: 1.3,
       fontSize: 11, color: C.inkSoft, fontFace: FONT_B, margin: 0
     });
   });
 
   s.addText("우리 회사가 강한 이유 — 세 브랜드가 가격대 · 라이프스타일 · 가족 구성을 모두 커버합니다.", {
-    x: 0.5, y: 4.7, w: 9, h: 0.3,
+    x: 0.5, y: 4.9, w: 9, h: 0.35,
     fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
@@ -1105,6 +1105,22 @@ makeDivider("02", "매트리스 마스터하기",
       x: 4.8, y: y + 0.28, w: 4.6, h: 0.4,
       fontSize: 10.5, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
     });
+  });
+
+  // 국제 표준 인사이트: 베개 = 수면 불만의 절반
+  s.addShape(pres.shapes.RECTANGLE, {
+    x: 0.5, y: 4.95, w: 9, h: 0.45,
+    fill: { color: C.cream }, line: { color: C.gold, width: 0.5 }
+  });
+  s.addText("국제 수면학회 인사이트", {
+    x: 0.7, y: 4.95, w: 3.0, h: 0.45,
+    fontSize: 10, color: C.goldDeep, fontFace: FONT_H,
+    bold: true, charSpacing: 1.5, valign: "middle", margin: 0
+  });
+  s.addText("수면 불만의 50%는 매트리스가 아닌 \"베개\"가 원인. 매트리스만큼 베개를 정성껏 권하세요. 새 매트리스 + 묵은 베개 = 새 차에 펑크 난 타이어.", {
+    x: 3.5, y: 4.95, w: 5.9, h: 0.45,
+    fontSize: 9.5, color: C.ink, fontFace: FONT_B,
+    bold: true, valign: "middle", margin: 0
   });
 
   addFooter(s, 18, "Part 2 · 업셀");
@@ -2081,7 +2097,7 @@ makeObjectionSlide(
 // ============================================================
 // PART 9 — 배송 실무 가이드 [NEW v2.1]
 // ============================================================
-// ============================================================
+
 // SLIDE 70 — 마무리 (우리의 약속)
 // ============================================================
 {

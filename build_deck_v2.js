@@ -342,13 +342,13 @@ makeDivider("01", "오가렌과 3대 브랜드",
     });
     // 하단 흰 블록
     s.addShape(pres.shapes.RECTANGLE, {
-      x, y: y + 1.0, w: 2.9, h: 2.7,
+      x, y: y + 1.0, w: 2.9, h: 2.3,
       fill: { color: C.white }, line: { color: C.line, width: 0.5 }
     });
     s.addText(`"${b.tagline}"`, {
       x: x + 0.2, y: y + 1.1, w: 2.5, h: 0.4,
       fontSize: 16, color: b.color, fontFace: FONT_H,
-      bold: true, bold: true, margin: 0
+      bold: true, margin: 0
     });
     s.addText(b.target, {
       x: x + 0.2, y: y + 1.55, w: 2.5, h: 0.3,
@@ -356,13 +356,13 @@ makeDivider("01", "오가렌과 3대 브랜드",
       bold: true, charSpacing: 2, margin: 0
     });
     s.addText(b.desc, {
-      x: x + 0.2, y: y + 2.0, w: 2.5, h: 1.6,
+      x: x + 0.2, y: y + 1.95, w: 2.5, h: 1.3,
       fontSize: 11, color: C.inkSoft, fontFace: FONT_B, margin: 0
     });
   });
 
   s.addText("우리 회사가 강한 이유 — 세 브랜드가 가격대 · 라이프스타일 · 가족 구성을 모두 커버합니다.", {
-    x: 0.5, y: 4.7, w: 9, h: 0.3,
+    x: 0.5, y: 4.9, w: 9, h: 0.35,
     fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
@@ -1013,6 +1013,22 @@ makeDivider("02", "매트리스 마스터하기",
     });
   });
 
+  // 국제 표준 인사이트: 베개 = 수면 불만의 절반
+  s.addShape(pres.shapes.RECTANGLE, {
+    x: 0.5, y: 4.95, w: 9, h: 0.45,
+    fill: { color: C.cream }, line: { color: C.gold, width: 0.5 }
+  });
+  s.addText("국제 수면학회 인사이트", {
+    x: 0.7, y: 4.95, w: 3.0, h: 0.45,
+    fontSize: 10, color: C.goldDeep, fontFace: FONT_H,
+    bold: true, charSpacing: 1.5, valign: "middle", margin: 0
+  });
+  s.addText("수면 불만의 50%는 매트리스가 아닌 \"베개\"가 원인. 매트리스만큼 베개를 정성껏 권하세요. 새 매트리스 + 묵은 베개 = 새 차에 펑크 난 타이어.", {
+    x: 3.5, y: 4.95, w: 5.9, h: 0.45,
+    fontSize: 9.5, color: C.ink, fontFace: FONT_B,
+    bold: true, valign: "middle", margin: 0
+  });
+
   addFooter(s, 18, "Part 2 · 업셀");
 }
 
@@ -1561,9 +1577,19 @@ makeDivider("04", "고객 응대 프로세스",
     });
   });
 
-  s.addText("Tip — 체험 중에는 가급적 말을 줄이세요. 고객이 자기 몸의 신호를 듣는 시간입니다.", {
-    x: 0.5, y: 4.85, w: 9, h: 0.4,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
+  // 글로벌 표준: 12분 룰 + 두 번 누워보기
+  s.addShape(pres.shapes.RECTANGLE, {
+    x: 0.5, y: 4.7, w: 9, h: 0.65,
+    fill: { color: C.ink }, line: { color: C.ink }
+  });
+  s.addText("글로벌 표준  ·  12분 룰 + 두 번 누워보기", {
+    x: 0.7, y: 4.75, w: 5.5, h: 0.28,
+    fontSize: 11, color: C.gold, fontFace: FONT_H,
+    bold: true, charSpacing: 1.5, margin: 0
+  });
+  s.addText("매트리스는 최소 12분은 누워봐야 진짜 느낌이 옵니다. 처음에는 \"편하다\", 다음에는 \"어디가 어떻게 편하다\"가 보여요. 후보 2개는 반드시 두 번씩 누워보게 — 첫 체험은 인상, 두 번째 체험이 결정.", {
+    x: 0.7, y: 5.02, w: 8.6, h: 0.3,
+    fontSize: 9.5, color: C.white, fontFace: FONT_B, margin: 0
   });
 
   addFooter(s, 30, "Part 4 · 체험 유도");
@@ -1730,10 +1756,10 @@ function makeObjectionSlide(num, page, objection, kicker, badAns, goodAns, why) 
 
 makeObjectionSlide(
   1, 34, "비싸요 / 예산이 그 정도는…",
-  "가격을 깎지 마세요. 가치의 단위를 바꾸세요.",
+  "가격을 깎지 마세요. 시간 단위로 환산하세요.  ·  8시간 × 365일 × 8년 = 23,360시간",
   "\"많이 비싸진 않아요\"\n\"이번 달 할인이라…\"\n→ 가격 방어는 가격 인정. 더 깎아야 한다는 메시지만 줍니다.",
-  "\"하루로 나누면 약 X백 원이세요. 8~10년 매일 8시간 쓰시니까요.\"\n또는\n\"이 침대는 8년 보증입니다. 매일 밤 좋은 잠을 보장받는 비용이라고 생각하시면 어떠세요?\"",
-  "고가 제품은 \"비교 단위\"를 일 단위·시간 단위로 나누면 인식이 바뀝니다.\n또한 \"수면 = 건강 = 일·관계의 질\"로 가치의 차원을 옮기면, \"가격\"이 아니라 \"투자\"로 보입니다.\n절대 깎으려 하지 말고, 가치를 다시 설명하세요."
+  "\"8시간 × 365일 × 8년 = 23,360시간을 쓰시는 거예요. 시간당 100원이 안 돼요.\"\n또는\n\"하루 약 X백 원이세요. 매일 밤 좋은 잠을 보장받는 8년치 비용이라고 보시면 됩니다.\"",
+  "Tempur·Sleep Number·Saatva 등 글로벌 매장 표준 전법 — 매트리스만큼 자주·오래 쓰는 가구는 없습니다. \"가격\"을 \"시간\"으로 환산하면 \"비싸다\"가 \"가성비 최강\"으로 바뀝니다.\n또한 \"수면 = 건강 = 일·관계의 질\". 가격이 아니라 투자로 보이게 만드세요. 절대 깎지 마세요."
 );
 
 // ============================================================

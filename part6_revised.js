@@ -208,7 +208,7 @@
   });
 
   s.addText("출처 — 본사 데일리 SV 세일즈톡 표준 프로세스 (3월 업셀링편)", {
-    x: 0.5, y: 5.25, w: 9, h: 0.25,
+    x: 0.5, y: 5.00, w: 9, h: 0.25,
     fontSize: 9, color: C.muted, fontFace: FONT_B, bold: true, margin: 0
   });
 
@@ -307,7 +307,7 @@
   });
 
   s.addText("출처 — 본사 데일리 SV 세일즈톡 (3월호) · 매장별 데이터 매월 공유", {
-    x: 0.5, y: 5.25, w: 9, h: 0.25,
+    x: 0.5, y: 5.00, w: 9, h: 0.25,
     fontSize: 9, color: C.muted, fontFace: FONT_B, bold: true, margin: 0
   });
 

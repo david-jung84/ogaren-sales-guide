@@ -17,27 +17,27 @@ const SLIDE_MARKERS = {
   SLIDE_3: 158,           // 목차
   PART1_START: 203,       // SLIDE 4 디바이더
   PART2_START: 638,       // SLIDE 12 디바이더
-  PART3_START: 1066,      // SLIDE 20 디바이더
-  PART4_START: 1288,      // SLIDE 25 디바이더
-  PART5_START: 1617,      // SLIDE 32 디바이더
-  PART6_START: 1904,      // SLIDE 41 디바이더
-  PART7_START: 2167,      // SLIDE 48 디바이더
-  PART8_START: 2379,      // SLIDE 53 디바이더
-  PART9_START: 3081,      // SLIDE 66 디바이더
-  FINAL_START: 3338,      // SLIDE 70 (마무리)
+  PART3_START: 1082,      // SLIDE 20 디바이더 (+16 from slide 18 인사이트 추가)
+  PART4_START: 1304,      // SLIDE 25 디바이더
+  PART5_START: 1643,      // SLIDE 32 디바이더 (+10 from slide 30 12분 룰 추가)
+  PART6_START: 1930,      // SLIDE 41 디바이더
+  PART7_START: 2193,      // SLIDE 48 디바이더
+  PART8_START: 2405,      // SLIDE 53 디바이더
+  PART9_START: 3108,      // SLIDE 66 디바이더 (+1 from slide 54 rowH 추가)
+  FINAL_START: 3365,      // SLIDE 70 (마무리)
   EOF: -1,
 };
 
 // Part 6 내부 분할 (가상 케이스 3개 → 박은희/한용진/5단계 + 매장 벤치마크 + 월간 업데이트로 교체)
 const PART6_INTERNAL = {
-  DIVIDER: 1904,           // SLIDE 41 디바이더
-  BEHAVIORS_7: 1910,       // SLIDE 42: TOP 7가지 행동 패턴 (유지)
-  CASE_1: 1964,            // SLIDE 43: 가상 케이스 1 (교체)
-  CASE_2: 2043,            // SLIDE 44: 가상 케이스 2 (교체)
-  CASE_3: 2061,            // SLIDE 45: 가상 케이스 3 (교체)
-  BEST_LINES: 2079,        // SLIDE 46: 베스트 멘트 (유지)
-  CHECKLIST: 2124,         // SLIDE 47: 자기 진단 체크리스트 (유지)
-  PART6_END: 2167,         // Part 7 시작
+  DIVIDER: 1930,           // SLIDE 41 디바이더
+  BEHAVIORS_7: 1936,       // SLIDE 42: TOP 7가지 행동 패턴 (유지)
+  CASE_1: 1990,            // SLIDE 43: 가상 케이스 1 (교체)
+  CASE_2: 2069,            // SLIDE 44: 가상 케이스 2 (교체)
+  CASE_3: 2087,            // SLIDE 45: 가상 케이스 3 (교체)
+  BEST_LINES: 2105,        // SLIDE 46: 베스트 멘트 (유지)
+  CHECKLIST: 2150,         // SLIDE 47: 자기 진단 체크리스트 (유지)
+  PART6_END: 2193,         // Part 7 시작
 };
 
 const lines = SRC.split("\n");
@@ -50,7 +50,7 @@ const HEADER = get(1, SLIDE_MARKERS.SLIDE_1);
 // makeDivider: SLIDE 4 (Part 1 디바이더) 직전 라인 205-232. 모든 세션에 필요.
 // makeObjectionSlide: SLIDE 34 (Part 5) 직전 라인 1670-1729. 세션 1엔 Part 5가 없지만 Part 8에 호출.
 const MAKE_DIVIDER_FN = get(205, 233);
-const MAKE_OBJECTION_SLIDE_FN = get(1670, 1730);
+const MAKE_OBJECTION_SLIDE_FN = get(1696, 1756);
 const HELPER_FNS = MAKE_DIVIDER_FN + "\n" + MAKE_OBJECTION_SLIDE_FN + "\n";
 
 // --- 세션 1 슬라이드 ---
