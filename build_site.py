@@ -373,7 +373,7 @@ def html_index(s1_count: int, s2_count: int, updated: str) -> str:
         잘 자는 사람이<br/>
         <em>잠을 바꾼다.</em>
       </h1>
-      <p class="lead">오프라인 쇼룸 매니저는 파는 사람이 아니라 수면 컨설턴트입니다. 제품을 깊이 이해하고, 고객의 한 마디 뒤에 숨은 결정을 읽고, 한 사람의 잠을 바꾸는 매장 운영.</p>
+      <p class="lead">쇼룸 매니저는 파는 사람이 아니라 수면 컨설턴트. 한 사람의 잠을 바꾸는 매장 운영.</p>
       <div class="meta">
         <div><b>76</b> Slides</div>
         <div><b>2</b> Sessions</div>
