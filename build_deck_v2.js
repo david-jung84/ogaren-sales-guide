@@ -1432,12 +1432,12 @@ makeDivider("04", "고객 응대 프로세스",
       fontSize: 18, color: C.gold, fontFace: FONT_H, bold: true, margin: 0
     });
     s.addText(l.good, {
-      x: 0.95, y, w: 5.9, h: 0.4,
-      fontSize: 12, color: C.ink, fontFace: FONT_H, bold: true, margin: 0
+      x: 0.95, y, w: 6.5, h: 0.5,
+      fontSize: 11.5, color: C.ink, fontFace: FONT_H, bold: true, valign: "middle", margin: 0
     });
     s.addText(l.note, {
-      x: 6.95, y, w: 2.5, h: 0.4,
-      fontSize: 10, color: C.goldDeep, fontFace: FONT_B, margin: 0
+      x: 7.55, y, w: 1.9, h: 0.5,
+      fontSize: 9.5, color: C.goldDeep, fontFace: FONT_B, valign: "middle", margin: 0
     });
   });
 
@@ -1506,8 +1506,8 @@ makeDivider("04", "고객 응대 프로세스",
       fontSize: 13, color: C.ink, fontFace: FONT_H, bold: true, margin: 0
     });
     s.addText(q.ask, {
-      x: x + 0.2, y: y + 0.5, w: 4.0, h: 0.4,
-      fontSize: 11.5, color: C.goldDeep, fontFace: FONT_H, bold: true, margin: 0
+      x: x + 0.15, y: y + 0.5, w: 4.05, h: 0.4,
+      fontSize: 10.5, color: C.goldDeep, fontFace: FONT_H, bold: true, margin: 0
     });
     s.addText("→ " + q.learn, {
       x: x + 0.2, y: y + 0.92, w: 4.0, h: 0.4,
@@ -1877,11 +1877,11 @@ makeObjectionSlide(
       fontSize: 13, color: C.ink, fontFace: FONT_H, bold: true, margin: 0
     });
     s.addText("WHEN  " + c.when, {
-      x: 2.7, y: y + 0.13, w: 5.5, h: 0.25,
+      x: 2.7, y: y + 0.13, w: 3.5, h: 0.25,
       fontSize: 10, color: C.gold, fontFace: FONT_B, charSpacing: 1, margin: 0
     });
     s.addText(c.note, {
-      x: 8.0, y: y + 0.13, w: 1.4, h: 0.25,
+      x: 6.3, y: y + 0.13, w: 3.0, h: 0.25,
       fontSize: 9, color: C.muted, fontFace: FONT_B,
       align: "right", margin: 0
     });
