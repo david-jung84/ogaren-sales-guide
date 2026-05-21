@@ -642,12 +642,12 @@ makeDivider("01", "오가렌과 3대 브랜드",
     bold: true, align: "right", margin: 0
   });
 
-  // 브랜드 마커 (원)
+  // 브랜드 마커 (원) — 차트 박스(y=1.4~4.7) 안에 마커+sub까지 모두 들어오도록 배치
   const markers = [
-    { x: cx + 5.8, y: cy + 0.9, w: 1.6, label: "SLEEPER", sub: "프리미엄 · 맞춤", color: C.ink },
-    { x: cx + 2.6, y: cy + 1.4, w: 1.4, label: "nooer", sub: "합리적 · 모던", color: C.goldDeep },
-    { x: cx + 1.5, y: cy + 2.3, w: 1.1, label: "Toddles", sub: "어린이 · 안전", color: C.blue },
-    { x: cx + 4.3, y: cy + 2.5, w: 1.0, label: "(경쟁사)", sub: "스프링 중심", color: C.muted },
+    { x: cx + 5.8, y: cy + 0.3, w: 1.5, label: "SLEEPER", sub: "프리미엄 · 맞춤", color: C.ink },
+    { x: cx + 2.7, y: cy + 0.6, w: 1.3, label: "nooer", sub: "합리적 · 모던", color: C.goldDeep },
+    { x: cx + 1.4, y: cy + 1.5, w: 1.0, label: "Toddles", sub: "어린이 · 안전", color: C.blue },
+    { x: cx + 4.4, y: cy + 1.7, w: 0.95, label: "(경쟁사)", sub: "스프링 중심", color: C.muted },
   ];
   markers.forEach(m => {
     s.addShape(pres.shapes.OVAL, {
