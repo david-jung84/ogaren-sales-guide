@@ -46,7 +46,7 @@ function addFooter(slide, pageNum, sectionLabel) {
     });
   }
   // 브랜드
-  slide.addText("OGAREN  ·  SLEEPER  ·  NOOER  ·  TODDLZ", {
+  slide.addText("OGAREN  ·  SLEEPER  ·  nooer  ·  Toddles", {
     x: 3.5, y: 5.32, w: 5.7, h: 0.25,
     fontSize: 8, color: C.muted, fontFace: FONT_B,
     align: "right", margin: 0, charSpacing: 2
@@ -196,7 +196,7 @@ addFooter = function(slide, _ignoredNum, sectionLabel) {
     margin: 0
   });
 
-  s.addText("SLEEPER  ·  NOOER  ·  TODDLZ", {
+  s.addText("SLEEPER  ·  nooer  ·  Toddles", {
     x: 0.5, y: 4.6, w: 9, h: 0.3,
     fontSize: 13, color: C.gold, fontFace: FONT_B,
     bold: true, charSpacing: 5, margin: 0
@@ -1950,7 +1950,7 @@ makeDivider("05", "배송 실무 가이드",
     }
   );
 
-  s.addText("SLEEPER  ·  NOOER  ·  TODDLZ  ·  OGAREN", {
+  s.addText("SLEEPER  ·  nooer  ·  Toddles  ·  OGAREN", {
     x: 0.5, y: 4.8, w: 9, h: 0.3,
     fontSize: 12, color: C.gold, fontFace: FONT_B,
     bold: true, charSpacing: 5, margin: 0

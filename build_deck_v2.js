@@ -46,7 +46,7 @@ function addFooter(slide, pageNum, sectionLabel) {
     });
   }
   // 브랜드
-  slide.addText("OGAREN  ·  SLEEPER  ·  NOOER  ·  TODDLZ", {
+  slide.addText("OGAREN  ·  SLEEPER  ·  nooer  ·  Toddles", {
     x: 3.5, y: 5.32, w: 5.7, h: 0.25,
     fontSize: 8, color: C.muted, fontFace: FONT_B,
     align: "right", margin: 0, charSpacing: 2
@@ -97,7 +97,7 @@ function addSectionTitle(slide, kicker, title) {
     margin: 0
   });
 
-  s.addText("SLEEPER  ·  NOOER  ·  TODDLZ", {
+  s.addText("SLEEPER  ·  nooer  ·  Toddles", {
     x: 0.5, y: 4.6, w: 9, h: 0.3,
     fontSize: 13, color: C.gold, fontFace: FONT_B,
     bold: true, charSpacing: 5, margin: 0
@@ -305,7 +305,7 @@ makeDivider("01", "오가렌과 3대 브랜드",
       accent: C.gold,
     },
     {
-      name: "NOOER",
+      name: "nooer",
       kr: "누어",
       tagline: "더 똑똑하게",
       target: "합리적 / 모던 / 트렌디",
@@ -314,7 +314,7 @@ makeDivider("01", "오가렌과 3대 브랜드",
       accent: C.cream,
     },
     {
-      name: "TODDLZ",
+      name: "Toddles",
       kr: "토들즈",
       tagline: "더 사랑스럽게",
       target: "유아 · 아동 / 가족",
@@ -424,7 +424,7 @@ makeDivider("01", "오가렌과 3대 브랜드",
 {
   const s = pres.addSlide();
   s.background = { color: C.white };
-  addSectionTitle(s, "BRAND 02  ·  NOOER", "누어 — 룬드 시리즈 (SNS 대란템)");
+  addSectionTitle(s, "BRAND 02  ·  nooer", "누어 — 룬드 시리즈 (SNS 대란템)");
 
   const items = [
     { img: "images/lundvik_low.jpg", name: "룬드빅 로우", tag: "저상형 호텔형", note: "낮고 모던한 라인" },
@@ -475,7 +475,7 @@ makeDivider("01", "오가렌과 3대 브랜드",
   addSectionTitle(s, "TARGET CUSTOMER", "브랜드별 타겟 고객 — 한눈에");
 
   const rows = [
-    ["", "SLEEPER", "NOOER", "TODDLZ"],
+    ["", "SLEEPER", "nooer", "Toddles"],
     ["주 타겟 연령", "30~50대 부부 · 신중년", "20대 후반~30대\n1인가구·신혼", "30~40대 가족\n(자녀 3~12세)"],
     ["라이프스타일", "프리미엄 · 인테리어 중시\n호텔 라이크 침실 추구", "트렌디 · 가성비\n오늘의집·SNS 영향", "안전 · 성장\n가족 시간 중시"],
     ["주요 의사결정 요인", "디자인 · 맞춤 · 품질", "디자인 · 가격 · 후기", "안전 · 내구성 · 디자인"],
@@ -551,8 +551,8 @@ makeDivider("01", "오가렌과 3대 브랜드",
   // 브랜드 마커 (원)
   const markers = [
     { x: cx + 5.8, y: cy + 0.9, w: 1.6, label: "SLEEPER", sub: "프리미엄 · 맞춤", color: C.ink },
-    { x: cx + 2.6, y: cy + 1.4, w: 1.4, label: "NOOER", sub: "합리적 · 모던", color: C.goldDeep },
-    { x: cx + 1.5, y: cy + 2.3, w: 1.1, label: "TODDLZ", sub: "어린이 · 안전", color: C.blue },
+    { x: cx + 2.6, y: cy + 1.4, w: 1.4, label: "nooer", sub: "합리적 · 모던", color: C.goldDeep },
+    { x: cx + 1.5, y: cy + 2.3, w: 1.1, label: "Toddles", sub: "어린이 · 안전", color: C.blue },
     { x: cx + 4.3, y: cy + 2.5, w: 1.0, label: "(경쟁사)", sub: "스프링 중심", color: C.muted },
   ];
   markers.forEach(m => {
@@ -794,7 +794,7 @@ makeDivider("02", "매트리스 마스터하기",
 {
   const s = pres.addSlide();
   s.background = { color: C.white };
-  addSectionTitle(s, "MATTRESS · NOOER", "누어 매트리스 — 탄/포/편 그리고 든든");
+  addSectionTitle(s, "MATTRESS · nooer", "누어 매트리스 — 탄/포/편 그리고 든든");
 
   const items = [
     { img: "images/tantan.jpg", name: "탄탄히 누어", sub: "단단한 지지력", who: "허리 부담 있는 분\n단단함 선호" },
@@ -2676,7 +2676,7 @@ makeDivider("08", "인증 & 안전성",
 {
   const s = pres.addSlide();
   s.background = { color: C.white };
-  addSectionTitle(s, "NOOER CERTIFIED", "누어 — 100% 국내 + 인증으로 완성");
+  addSectionTitle(s, "nooer CERTIFIED", "누어 — 100% 국내 + 인증으로 완성");
 
   s.addText("누어는 \"합리적\"이지만 \"덜 안전한\" 매트리스가 아닙니다. 본사가 자신 있게 30일 트라이얼을 제공하는 이유.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
@@ -2727,7 +2727,7 @@ makeDivider("08", "인증 & 안전성",
 {
   const s = pres.addSlide();
   s.background = { color: C.white };
-  addSectionTitle(s, "TODDLZ SAFETY", "토들즈 — 어린이가 매일 자는 곳, 가장 까다롭게");
+  addSectionTitle(s, "Toddles SAFETY", "토들즈 — 어린이가 매일 자는 곳, 가장 까다롭게");
 
   s.addText("자녀를 위한 침대는 \"좋아 보이는 것\"이 아니라 \"증명된 것\"이어야 합니다. 토들즈 버터 매트리스 3종(마일드·멜티·퓨어)은 다음 인증을 모두 통과했습니다.", {
     x: 0.5, y: 1.35, w: 9, h: 0.6,
@@ -3368,7 +3368,7 @@ makeDivider("09", "배송 실무 가이드",
     }
   );
 
-  s.addText("SLEEPER  ·  NOOER  ·  TODDLZ  ·  OGAREN", {
+  s.addText("SLEEPER  ·  nooer  ·  Toddles  ·  OGAREN", {
     x: 0.5, y: 4.8, w: 9, h: 0.3,
     fontSize: 12, color: C.gold, fontFace: FONT_B,
     bold: true, charSpacing: 5, margin: 0
