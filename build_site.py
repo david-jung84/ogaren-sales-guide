@@ -355,7 +355,7 @@ def html_index(s1_count: int, s2_count: int, updated: str) -> str:
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>오가렌 매장 매니저 교육 · 세일즈 가이드</title>
-<meta name="description" content="오가렌 오프라인 쇼룸 매니저는 파는 사람이 아니라 수면 컨설턴트. 우리는 그래서 잘 잔다, 그래서 잘 안내한다." />
+<meta name="description" content="오가렌 오프라인 쇼룸 매니저는 파는 사람이 아니라 수면 컨설턴트. 우리는 잘 잔다, 그래서 잘 안내한다." />
 <style>{CSS}</style>
 </head>
 <body>
@@ -441,7 +441,7 @@ def html_index(s1_count: int, s2_count: int, updated: str) -> str:
       <div class="dl-grid">
         <a class="dl-item" href="assets/download/오가렌_세일즈가이드_세션1.pptx" download>
           <div class="lbl">Session 01 · PPTX</div>
-          <div class="name">우리는 그래서 잘 잔다</div>
+          <div class="name">우리는 잘 잔다</div>
           <div class="arrow">↓ Download</div>
         </a>
         <a class="dl-item" href="assets/download/오가렌_세일즈가이드_세션2.pptx" download>
@@ -525,7 +525,7 @@ def html_session(session_name: str, session_label: str, subtitle: str, toc: list
                 f'<li><a href="#{sec["id"]}">{heading}</a></li>'
             )
 
-    # 타이틀 파싱: "세션 1" → "Session 01", subtitle "우리는 그래서 잘 잔다" → 마지막 단어 italic
+    # 타이틀 파싱: "세션 1" → "Session 01", subtitle "우리는 잘 잔다" → 마지막 단어 italic
     session_num = session_label.replace("세션 ", "")
     subtitle_em = re.sub(r"(잘\s*잔다|잘\s*판다|잘\s*안내한다|잠을\s*바꾼다)\.?", r"<em>\1.</em>", subtitle)
 
@@ -614,7 +614,7 @@ def main():
         html_index(s1_count, s2_count, updated), encoding="utf-8"
     )
     (SITE / "session1.html").write_text(
-        html_session("session1", "세션 1", "우리는 그래서 잘 잔다",
+        html_session("session1", "세션 1", "우리는 잘 잔다",
                      SESSION1_TOC, s1_titles, "assets/session1",
                      S1_PPT.name),
         encoding="utf-8",

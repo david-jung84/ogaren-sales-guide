@@ -202,7 +202,7 @@ addFooter = function(slide, _ignoredNum, sectionLabel) {
     bold: true, charSpacing: 5, margin: 0
   });
 
-  s.addText("세션 1  ·  우리는 그래서 잘 잔다", {
+  s.addText("세션 1  ·  우리는 잘 잔다", {
     x: 0.5, y: 5.0, w: 9, h: 0.3,
     fontSize: 10, color: C.muted, fontFace: FONT_B,
     margin: 0

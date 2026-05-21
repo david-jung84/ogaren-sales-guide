@@ -162,7 +162,7 @@ function renumberFooterLabels(code, mapping) {
 // 세션 1 빌드
 // ============================================================
 const cover1 = patchCover(get(SLIDE_MARKERS.SLIDE_1, SLIDE_MARKERS.SLIDE_2),
-  "세션 1", "우리는 그래서 잘 잔다");
+  "세션 1", "우리는 잘 잔다");
 const usage = get(SLIDE_MARKERS.SLIDE_2, SLIDE_MARKERS.SLIDE_3);
 const toc1 = patchToc(get(SLIDE_MARKERS.SLIDE_3, SLIDE_MARKERS.PART1_START), true);
 
