@@ -42,7 +42,7 @@
   });
   s.addText("오더 9건 중 8건이 시그니처\n시그니처 10조 판매", {
     x: 0.65, y: 4.05, w: 2.7, h: 0.9,
-    fontSize: 10.5, color: C.white, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.white, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 우측: 판매 전략
@@ -111,7 +111,7 @@
   });
   s.addText("오더 16건 중 9건이 시그니처\n시그니처 10조 판매", {
     x: 0.65, y: 4.05, w: 2.7, h: 0.9,
-    fontSize: 10.5, color: C.creamSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.creamSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   s.addText("판매 전략", {
@@ -155,7 +155,7 @@
 
   s.addText("일방적 권유 NO. 고객이 \"체험을 통해 스스로 선택하게\" 하는 5단계 표준 프로세스.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const steps = [
@@ -209,7 +209,7 @@
 
   s.addText("출처 — 본사 데일리 SV 세일즈톡 표준 프로세스 (3월 업셀링편)", {
     x: 0.5, y: 5.25, w: 9, h: 0.25,
-    fontSize: 9, color: C.muted, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 9, color: C.muted, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 45, "Part 6 · 시그니처 5단계");
@@ -260,7 +260,7 @@
   });
   s.addText("INSIGHT — 시그니처 체험 중심 매장은\n비중 평균 70%+. 프리미엄 기준 체험으로\n구매 전환율 상승.", {
     x: 0.65, y: 4.3, w: 2.7, h: 0.75,
-    fontSize: 9, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 9, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 우측: TOP 매장 순위 표
@@ -308,7 +308,7 @@
 
   s.addText("출처 — 본사 데일리 SV 세일즈톡 (3월호) · 매장별 데이터 매월 공유", {
     x: 0.5, y: 5.25, w: 9, h: 0.25,
-    fontSize: 9, color: C.muted, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 9, color: C.muted, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 46, "Part 6 · 매장별 벤치마크");
@@ -326,7 +326,7 @@
 
   s.addText("이 가이드는 \"상시 매뉴얼\". 본사가 매월 발행하는 \"데일리 SV 세일즈톡\"은 \"이번 달 캠페인\". 둘이 한 세트입니다.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 11.5, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11.5, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 비교 표
@@ -381,7 +381,7 @@
   s.addText("매니저 행동 — 매월 첫 영업일 데일리 SV 세일즈톡 받으면 5분 안에 읽고, TOP 매장 사례 1개 자기 매장에 적용해보세요.", {
     x: 0.65, y: 4.85, w: 8.7, h: 0.45,
     fontSize: 10.5, color: C.gold, fontFace: FONT_B,
-    italic: false, valign: "middle", margin: 0
+    bold: true, valign: "middle", margin: 0
   });
 
   addFooter(s, 49, "Part 6 · 월간 업데이트");

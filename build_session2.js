@@ -91,7 +91,7 @@ function makeDivider(num, partTitle, subtitle) {
   s.addText(subtitle, {
     x: 0.5, y: 3.7, w: 9, h: 0.5,
     fontSize: 15, color: C.line, fontFace: FONT_B,
-    italic: false, margin: 0
+    bold: true, margin: 0
   });
   return s;
 }
@@ -104,7 +104,7 @@ function makeObjectionSlide(num, page, objection, kicker, badAns, goodAns, why) 
   s.addText(kicker, {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
     fontSize: 13, color: C.gold, fontFace: FONT_H,
-    italic: false, bold: true, margin: 0
+    bold: true, bold: true, margin: 0
   });
 
   // 나쁜 답 박스
@@ -120,7 +120,7 @@ function makeObjectionSlide(num, page, objection, kicker, badAns, goodAns, why) 
   s.addText(badAns, {
     x: 0.65, y: 2.4, w: 4.0, h: 1.05,
     fontSize: 11, color: C.inkSoft, fontFace: FONT_B,
-    italic: false, margin: 0
+    bold: true, margin: 0
   });
 
   // 좋은 답 박스
@@ -136,7 +136,7 @@ function makeObjectionSlide(num, page, objection, kicker, badAns, goodAns, why) 
   s.addText(goodAns, {
     x: 5.35, y: 2.4, w: 4.0, h: 1.05,
     fontSize: 11, color: C.ink, fontFace: FONT_B,
-    italic: false, margin: 0
+    bold: true, margin: 0
   });
 
   // 왜?
@@ -247,7 +247,7 @@ addFooter = function(slide, _ignoredNum, sectionLabel) {
 
   s.addText("Tip — 가이드는 \"공부할 책\"이 아니라 \"꺼내 쓸 도구\"입니다. 외우려 하지 말고, 필요할 때 찾으세요.", {
     x: 0.5, y: 4.95, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 2, "사용 안내");
@@ -338,7 +338,7 @@ makeDivider("01", "고객 응대 프로세스",
     });
     s.addText(p.sign, {
       x: x + 0.85, y: y + 0.45, w: 1.95, h: 0.3,
-      fontSize: 10, color: C.gold, fontFace: FONT_B, italic: false, margin: 0
+      fontSize: 10, color: C.gold, fontFace: FONT_B, bold: true, margin: 0
     });
     s.addText("WHO  " + p.who, {
       x: x + 0.15, y: y + 0.8, w: 2.6, h: 0.35,
@@ -352,7 +352,7 @@ makeDivider("01", "고객 응대 프로세스",
 
   s.addText("Tip — 5가지 유형 중 \"E. 둘러보기형\"이 사실 가장 큰 기회. 압박 없는 응대 + 명함은 재방문률을 가장 크게 높입니다.", {
     x: 0.5, y: 5.1, w: 9, h: 0.3,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 26, "Part 1 · 페르소나");
@@ -402,13 +402,13 @@ makeDivider("01", "고객 응대 프로세스",
     s.addText(st.goal, {
       x: x + 0.1, y: y + 2.4, w: 1.55, h: 0.4,
       fontSize: 10, color: C.goldDeep, fontFace: FONT_B,
-      bold: true, italic: false, align: "center", margin: 0
+      bold: true, bold: true, align: "center", margin: 0
     });
   });
 
   s.addText("핵심 — 5단계는 \"순서\"이지만 정해진 시간이 없습니다. 단계 사이에 머무르는 시간이 신뢰를 결정합니다.", {
     x: 0.5, y: 4.85, w: 9, h: 0.4,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 27, "Part 1 · 5단계 응대");
@@ -424,7 +424,7 @@ makeDivider("01", "고객 응대 프로세스",
 
   s.addText("입장 즉시 달려가지 마세요. 3분간 자율 관람 → 매니저는 자연스럽게 동선 안에서 등장.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const lines = [
@@ -443,7 +443,7 @@ makeDivider("01", "고객 응대 프로세스",
     });
     s.addText(l.good, {
       x: 0.95, y, w: 5.9, h: 0.4,
-      fontSize: 12, color: C.ink, fontFace: FONT_H, italic: false, margin: 0
+      fontSize: 12, color: C.ink, fontFace: FONT_H, bold: true, margin: 0
     });
     s.addText(l.note, {
       x: 6.95, y, w: 2.5, h: 0.4,
@@ -474,7 +474,7 @@ makeDivider("01", "고객 응대 프로세스",
 
   s.addText("이 4가지만 자연스럽게 물어보면, 추천이 거의 정해집니다.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 13, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 13, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const qs = [
@@ -517,7 +517,7 @@ makeDivider("01", "고객 응대 프로세스",
     });
     s.addText(q.ask, {
       x: x + 0.2, y: y + 0.5, w: 4.0, h: 0.4,
-      fontSize: 11.5, color: C.goldDeep, fontFace: FONT_H, italic: false, margin: 0
+      fontSize: 11.5, color: C.goldDeep, fontFace: FONT_H, bold: true, margin: 0
     });
     s.addText("→ " + q.learn, {
       x: x + 0.2, y: y + 0.92, w: 4.0, h: 0.4,
@@ -538,7 +538,7 @@ makeDivider("01", "고객 응대 프로세스",
 
   s.addText("침대 매장의 진실 — 누워본 고객의 구매 전환율이 안 누워본 고객의 3배.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 14, color: C.goldDeep, fontFace: FONT_H, bold: true, italic: false, margin: 0
+    fontSize: 14, color: C.goldDeep, fontFace: FONT_H, bold: true, bold: true, margin: 0
   });
 
   const mentions = [
@@ -567,13 +567,13 @@ makeDivider("01", "고객 응대 프로세스",
     s.addText(m.line, {
       x: 2.6, y, w: 6.85, h: 0.45,
       fontSize: 11.5, color: C.ink, fontFace: FONT_B,
-      italic: false, valign: "middle", margin: 0
+      bold: true, valign: "middle", margin: 0
     });
   });
 
   s.addText("Tip — 체험 중에는 가급적 말을 줄이세요. 고객이 자기 몸의 신호를 듣는 시간입니다.", {
     x: 0.5, y: 4.85, w: 9, h: 0.4,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 30, "Part 1 · 체험 유도");
@@ -589,7 +589,7 @@ makeDivider("01", "고객 응대 프로세스",
 
   s.addText("두 사람을 한 명처럼 응대하면 실패. 한 명씩 \"보이게\" 응대하면 성공.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 13, color: C.goldDeep, fontFace: FONT_H, italic: false, bold: true, margin: 0
+    fontSize: 13, color: C.goldDeep, fontFace: FONT_H, bold: true, bold: true, margin: 0
   });
 
   const rules = [
@@ -662,7 +662,7 @@ makeDivider("02", "세일즈 스크립트 & 거절 처리",
     s.addText(`"${o}"`, {
       x: 1.3, y, w: 7.0, h: 0.42,
       fontSize: 13, color: C.ink, fontFace: FONT_B,
-      italic: false, valign: "middle", margin: 0
+      bold: true, valign: "middle", margin: 0
     });
     s.addText("→ 다음 페이지", {
       x: 8.3, y, w: 1.1, h: 0.42,
@@ -685,7 +685,7 @@ function makeObjectionSlide(num, page, objection, kicker, badAns, goodAns, why) 
   s.addText(kicker, {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
     fontSize: 13, color: C.gold, fontFace: FONT_H,
-    italic: false, bold: true, margin: 0
+    bold: true, bold: true, margin: 0
   });
 
   // 나쁜 답 박스
@@ -701,7 +701,7 @@ function makeObjectionSlide(num, page, objection, kicker, badAns, goodAns, why) 
   s.addText(badAns, {
     x: 0.65, y: 2.4, w: 4.0, h: 1.05,
     fontSize: 11, color: C.inkSoft, fontFace: FONT_B,
-    italic: false, margin: 0
+    bold: true, margin: 0
   });
 
   // 좋은 답 박스
@@ -717,7 +717,7 @@ function makeObjectionSlide(num, page, objection, kicker, badAns, goodAns, why) 
   s.addText(goodAns, {
     x: 5.35, y: 2.4, w: 4.0, h: 1.05,
     fontSize: 11, color: C.ink, fontFace: FONT_B,
-    italic: false, margin: 0
+    bold: true, margin: 0
   });
 
   // 왜?
@@ -811,12 +811,12 @@ makeObjectionSlide(
     "→ \"이사 일정이 언제세요? 침대는 보통 이사 2~4주 전에 주문하셔야 입주일에 받으실 수 있어요.\n오늘 결정 안 하셔도 되는데, 일정만 알려주시면 제가 챙겨서 연락드릴게요.\"",
     {
       x: 0.7, y: 1.9, w: 8.6, h: 0.7,
-      fontSize: 11, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+      fontSize: 11, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
     }
   );
   s.addText("WHY — \"이사할 때 다시\"는 90% 안 옵니다. 연락처를 얻고 능동적으로 추적하세요. CRM 입력 필수.", {
     x: 0.7, y: 2.65, w: 8.6, h: 0.5,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, bold: true, margin: 0
   });
 
   // #7 멀쩡함
@@ -832,12 +832,12 @@ makeObjectionSlide(
     "→ \"몇 년 쓰셨어요? … 7년이면 거의 교체 시점이세요. 매트리스는 안 꺼져도 위생적으로 진드기·먼지가 누적되거든요.\n저희 누어 든든 토퍼만 얹어도 완전히 다른 잠을 느끼세요. 매트리스 교체보다 부담 적고요.\"",
     {
       x: 0.7, y: 3.9, w: 8.6, h: 0.7,
-      fontSize: 11, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+      fontSize: 11, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
     }
   );
   s.addText("WHY — \"멀쩡함\"은 \"바꿀 이유 없음\"이 아니라 \"바꿀 동기 부족\". 위생·토퍼 업셀로 부드럽게 진입.", {
     x: 0.7, y: 4.65, w: 8.6, h: 0.5,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, bold: true, margin: 0
   });
 
   addFooter(s, 39, "Part 2 · 거절 #6 #7");
@@ -898,13 +898,13 @@ makeObjectionSlide(
     s.addText(c.line, {
       x: 0.7, y: y + 0.45, w: 8.6, h: 0.55,
       fontSize: 12, color: C.goldDeep, fontFace: FONT_H,
-      italic: false, margin: 0
+      bold: true, margin: 0
     });
   });
 
   s.addText("Tip — 클로징은 \"강요\"가 아니라 \"정리\"입니다. 고객 머릿속에 흩어진 선택지를 매니저가 한 번에 묶어주는 일.", {
     x: 0.5, y: 5.0, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 40, "Part 2 · 클로징");
@@ -964,7 +964,7 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
 
   s.addText("핵심 — 7가지 모두 한 줄로 묶으면 \"고객을 존중한다\"입니다. 기술이 아니라 태도가 본질입니다.", {
     x: 0.5, y: 4.85, w: 9, h: 0.4,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 42, "Part 3 · 7가지 행동");
@@ -1015,7 +1015,7 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
   });
   s.addText("오더 9건 중 8건이 시그니처\n시그니처 10조 판매", {
     x: 0.65, y: 4.05, w: 2.7, h: 0.9,
-    fontSize: 10.5, color: C.white, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.white, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 우측: 판매 전략
@@ -1084,7 +1084,7 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
   });
   s.addText("오더 16건 중 9건이 시그니처\n시그니처 10조 판매", {
     x: 0.65, y: 4.05, w: 2.7, h: 0.9,
-    fontSize: 10.5, color: C.creamSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.creamSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   s.addText("판매 전략", {
@@ -1128,7 +1128,7 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
 
   s.addText("일방적 권유 NO. 고객이 \"체험을 통해 스스로 선택하게\" 하는 5단계 표준 프로세스.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const steps = [
@@ -1182,7 +1182,7 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
 
   s.addText("출처 — 본사 데일리 SV 세일즈톡 표준 프로세스 (3월 업셀링편)", {
     x: 0.5, y: 5.25, w: 9, h: 0.25,
-    fontSize: 9, color: C.muted, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 9, color: C.muted, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 45, "Part 3 · 시그니처 5단계");
@@ -1233,7 +1233,7 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
   });
   s.addText("INSIGHT — 시그니처 체험 중심 매장은\n비중 평균 70%+. 프리미엄 기준 체험으로\n구매 전환율 상승.", {
     x: 0.65, y: 4.3, w: 2.7, h: 0.75,
-    fontSize: 9, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 9, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 우측: TOP 매장 순위 표
@@ -1281,7 +1281,7 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
 
   s.addText("출처 — 본사 데일리 SV 세일즈톡 (3월호) · 매장별 데이터 매월 공유", {
     x: 0.5, y: 5.25, w: 9, h: 0.25,
-    fontSize: 9, color: C.muted, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 9, color: C.muted, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 46, "Part 3 · 매장별 벤치마크");
@@ -1299,7 +1299,7 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
 
   s.addText("이 가이드는 \"상시 매뉴얼\". 본사가 매월 발행하는 \"데일리 SV 세일즈톡\"은 \"이번 달 캠페인\". 둘이 한 세트입니다.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 11.5, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11.5, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 비교 표
@@ -1354,7 +1354,7 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
   s.addText("매니저 행동 — 매월 첫 영업일 데일리 SV 세일즈톡 받으면 5분 안에 읽고, TOP 매장 사례 1개 자기 매장에 적용해보세요.", {
     x: 0.65, y: 4.85, w: 8.7, h: 0.45,
     fontSize: 10.5, color: C.gold, fontFace: FONT_B,
-    italic: false, valign: "middle", margin: 0
+    bold: true, valign: "middle", margin: 0
   });
 
   addFooter(s, 49, "Part 3 · 월간 업데이트");
@@ -1392,13 +1392,13 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
     s.addText(l, {
       x: x + 0.2, y, w: 4.05, h: 0.75,
       fontSize: 11, color: C.ink, fontFace: FONT_B,
-      italic: false, valign: "middle", margin: 0
+      bold: true, valign: "middle", margin: 0
     });
   });
 
   s.addText("→ 이 8개 멘트를 자기 말로 다시 적어 외워두세요. 매장 즉시 사용 가능한 \"현장 무기\"입니다.", {
     x: 0.5, y: 5.0, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, bold: true, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, bold: true, margin: 0
   });
 
   addFooter(s, 46, "Part 3 · 베스트 멘트");
@@ -1414,7 +1414,7 @@ makeDivider("03", "TOP 매니저 케이스 & 모범 사례",
 
   s.addText("매일 마감 후, 이 10가지를 자신에게 물어보세요. 7개 이상 YES면 좋은 하루입니다.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const checks = [
@@ -1499,7 +1499,7 @@ makeDivider("04", "운영 · KPI · 부록",
 
   s.addText("재구매·추천 고객은 신규 고객 획득 비용의 1/5. CRM은 매장 매니저의 \"개인 자산\"입니다.", {
     x: 0.5, y: 4.95, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, bold: true, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, bold: true, margin: 0
   });
 
   addFooter(s, 49, "Part 4 · 사후 관리");
@@ -1560,7 +1560,7 @@ makeDivider("04", "운영 · KPI · 부록",
 
   s.addText("운영 — 본사는 분기마다 매니저별 KPI 대시보드 제공. 1:1 코칭은 분기 1회 정례.", {
     x: 0.5, y: 4.95, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 50, "Part 4 · KPI");
@@ -1608,7 +1608,7 @@ makeDivider("04", "운영 · KPI · 부록",
 
   s.addText("→ 본사 매니저 채널에서 \"FAQ Top 30 상세 답변집\" 별도 배포. 응대 중 모르는 질문은 절대 답하지 말고 \"확인 후 안내\"하세요.", {
     x: 0.5, y: 5.05, w: 9, h: 0.3,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 51, "Part 4 · FAQ");
@@ -1674,7 +1674,7 @@ makeDivider("05", "배송 실무 가이드",
 
   s.addText("고객이 매장에서 가장 자주 묻는 질문 — \"우리 집에 들어와요?\" 엘리베이터 인승을 먼저 확인하세요.", {
     x: 0.5, y: 1.35, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 엘리베이터 표
@@ -1730,7 +1730,7 @@ makeDivider("05", "배송 실무 가이드",
   });
   s.addText("엘리베이터 인증이 동일하더라도 내부 크기·출입문 너비 등 실제 규격에 따라 반입 가능 여부가 다를 수 있습니다.\n사전 확인 안내: \"고객님, 엘리베이터 내부 가로·세로·출입문 너비를 알려주시면 더 정확히 안내드릴 수 있어요.\"", {
     x: 0.7, y: 4.78, w: 8.6, h: 0.55,
-    fontSize: 10, color: C.white, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10, color: C.white, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 67, "Part 5 · 엘리베이터");
@@ -1839,7 +1839,7 @@ makeDivider("05", "배송 실무 가이드",
 
   s.addText("고객이 \"제 침대 어디까지 왔어요?\" 물으면, 매니저는 즉시 송장상태로 답해야 합니다.", {
     x: 0.5, y: 1.4, w: 9, h: 0.35,
-    fontSize: 11, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 좌측: 조회 경로
@@ -1909,7 +1909,7 @@ makeDivider("05", "배송 실무 가이드",
   // 하단 Tip
   s.addText("Tip — 주문승인은 지정일 -1일 오전 11시 이전. 배송일정상담 의뢰 건은 임시로 지정일 \"2099년\" 표시, 해피콜 후 변경됩니다.", {
     x: 0.5, y: 5.1, w: 9, h: 0.3,
-    fontSize: 10, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 69, "Part 5 · 오늘의집 조회");
@@ -1946,7 +1946,7 @@ makeDivider("05", "배송 실무 가이드",
     {
       x: 0.5, y: 3.6, w: 9, h: 0.9,
       fontSize: 15, color: C.line, fontFace: FONT_B,
-      italic: false, margin: 0
+      bold: true, margin: 0
     }
   );
 

@@ -148,7 +148,7 @@ function addSectionTitle(slide, kicker, title) {
 
   s.addText("Tip — 가이드는 \"공부할 책\"이 아니라 \"꺼내 쓸 도구\"입니다. 외우려 하지 말고, 필요할 때 찾으세요.", {
     x: 0.5, y: 4.95, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 2, "사용 안내");
@@ -226,7 +226,7 @@ function makeDivider(num, partTitle, subtitle) {
   s.addText(subtitle, {
     x: 0.5, y: 3.7, w: 9, h: 0.5,
     fontSize: 15, color: C.line, fontFace: FONT_B,
-    italic: false, margin: 0
+    bold: true, margin: 0
   });
   return s;
 }
@@ -243,7 +243,7 @@ makeDivider("01", "오가렌과 3대 브랜드",
 
   s.addText("우리는 고객의 \"하루의 1/3\"을 디자인합니다.", {
     x: 0.5, y: 1.45, w: 9, h: 0.5,
-    fontSize: 22, color: C.goldDeep, fontFace: FONT_H, bold: true, italic: false, margin: 0
+    fontSize: 22, color: C.goldDeep, fontFace: FONT_H, bold: true, bold: true, margin: 0
   });
 
   s.addText(
@@ -348,7 +348,7 @@ makeDivider("01", "오가렌과 3대 브랜드",
     s.addText(`"${b.tagline}"`, {
       x: x + 0.2, y: y + 1.1, w: 2.5, h: 0.4,
       fontSize: 16, color: b.color, fontFace: FONT_H,
-      bold: true, italic: false, margin: 0
+      bold: true, bold: true, margin: 0
     });
     s.addText(b.target, {
       x: x + 0.2, y: y + 1.55, w: 2.5, h: 0.3,
@@ -363,7 +363,7 @@ makeDivider("01", "오가렌과 3대 브랜드",
 
   s.addText("우리 회사가 강한 이유 — 세 브랜드가 가격대 · 라이프스타일 · 가족 구성을 모두 커버합니다.", {
     x: 0.5, y: 4.7, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 6, "Part 1 · 3대 브랜드");
@@ -508,7 +508,7 @@ makeDivider("01", "오가렌과 3대 브랜드",
 
   s.addText("Tip — 고객의 옷차림·동반자·첫 질문만으로 1차 페르소나는 보입니다. 그 다음은 \"가격대\"가 아니라 \"라이프스타일\"부터 물으세요.", {
     x: 0.5, y: 4.85, w: 9, h: 0.4,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 9, "Part 1 · 타겟 페르소나");
@@ -577,7 +577,7 @@ makeDivider("01", "오가렌과 3대 브랜드",
   // 인사이트
   s.addText("매니저 핵심 메시지 — 우리 3개 브랜드가 합리에서 프리미엄까지, 1인가구부터 가족까지 모두 커버합니다.\n경쟁사 한 곳에서 모두 살 수 없는 이유, 바로 \"라인업의 깊이\"입니다.", {
     x: 0.5, y: 4.85, w: 9, h: 0.5,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 10, "Part 1 · 포지셔닝");
@@ -627,7 +627,7 @@ makeDivider("01", "오가렌과 3대 브랜드",
     {
       x: 0.5, y: 4.2, w: 9, h: 0.8,
       fontSize: 12, color: C.inkSoft, fontFace: FONT_B,
-      italic: false, margin: 0
+      bold: true, margin: 0
     }
   );
 
@@ -709,7 +709,7 @@ makeDivider("02", "매트리스 마스터하기",
     });
     s.addText("추천 고객 — " + t.who, {
       x: x + 0.25, y: y + 1.4, w: 4, h: 0.3,
-      fontSize: 10, color: C.goldDeep, fontFace: FONT_B, italic: false, bold: true, margin: 0
+      fontSize: 10, color: C.goldDeep, fontFace: FONT_B, bold: true, bold: true, margin: 0
     });
   });
 
@@ -832,7 +832,7 @@ makeDivider("02", "매트리스 마스터하기",
   });
   s.addText("\"매트리스는 일주일 자봐야 알아요. 30일 써보시고 안 맞으면 교환·환불됩니다\" — 망설이는 고객에 결정적 한 마디", {
     x: 0.7, y: 4.92, w: 8.6, h: 0.3,
-    fontSize: 10, color: C.white, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10, color: C.white, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 15, "Part 2 · 누어 매트리스");
@@ -891,7 +891,7 @@ makeDivider("02", "매트리스 마스터하기",
 
   s.addText("Tip — 이 표는 \"시작점\"입니다. 반드시 고객을 실제로 누워보게 해서 본인 감각으로 최종 결정하게 하세요.", {
     x: 0.5, y: 4.6, w: 9, h: 0.4,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 16, "Part 2 · 추천 매트릭스");
@@ -907,7 +907,7 @@ makeDivider("02", "매트리스 마스터하기",
 
   s.addText("부부 매장 방문 60% 이상. 두 사람의 \"체중·자세·취향\"이 다르다는 사실에서 출발하세요.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 3가지 시나리오
@@ -1009,7 +1009,7 @@ makeDivider("02", "매트리스 마스터하기",
     });
     s.addText(u.desc, {
       x: 4.8, y: y + 0.28, w: 4.6, h: 0.4,
-      fontSize: 10.5, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+      fontSize: 10.5, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
     });
   });
 
@@ -1056,7 +1056,7 @@ makeDivider("02", "매트리스 마스터하기",
 
   s.addText("매니저 멘트 — \"제가 케어 방법 한 장 정리해서 같이 챙겨드릴게요.\" — 케어 가이드 제공은 \"진짜 전문가\" 인상을 결정합니다.", {
     x: 0.5, y: 4.85, w: 9, h: 0.4,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 19, "Part 2 · 케어 & A/S");
@@ -1174,7 +1174,7 @@ makeDivider("03", "침대 프레임 마스터하기",
 
   s.addText("매니저 핵심 질문 — \"침실 방 크기 어느 정도세요?\" → 사이즈 컨설팅의 출발점.\n공간 작은데 큰 침대를 권하지 않는 정직함이 신뢰를 만듭니다.", {
     x: 0.5, y: 4.75, w: 9, h: 0.5,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 22, "Part 3 · 사이즈");
@@ -1190,7 +1190,7 @@ makeDivider("03", "침대 프레임 마스터하기",
 
   s.addText("\"우리는 만들어둔 침대를 파는 게 아니라, 고객님 침실에 맞춘 침대를 만들어 드립니다.\"", {
     x: 0.5, y: 1.4, w: 9, h: 0.5,
-    fontSize: 16, color: C.goldDeep, fontFace: FONT_H, bold: true, italic: false, margin: 0
+    fontSize: 16, color: C.goldDeep, fontFace: FONT_H, bold: true, bold: true, margin: 0
   });
 
   const options = [
@@ -1225,7 +1225,7 @@ makeDivider("03", "침대 프레임 마스터하기",
 
   s.addText("매니저 무기 — 경쟁사가 \"기성 사이즈만 됩니다\" 할 때, 우리는 \"고객님 방에 맞춰 만들어 드립니다\" 라고 할 수 있습니다.", {
     x: 0.5, y: 4.95, w: 9, h: 0.3,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 23, "Part 3 · 1:1 맞춤");
@@ -1278,7 +1278,7 @@ makeDivider("03", "침대 프레임 마스터하기",
 
   s.addText("Tip — 고객의 핸드폰 배경, 인스타그램, 자녀 사진 등 \"공간 단서\"를 자연스럽게 물어보세요. 컬러 추천이 정확해집니다.", {
     x: 0.5, y: 4.65, w: 9, h: 0.4,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 24, "Part 3 · 인테리어 매칭");
@@ -1328,7 +1328,7 @@ makeDivider("04", "고객 응대 프로세스",
     });
     s.addText(p.sign, {
       x: x + 0.85, y: y + 0.45, w: 1.95, h: 0.3,
-      fontSize: 10, color: C.gold, fontFace: FONT_B, italic: false, margin: 0
+      fontSize: 10, color: C.gold, fontFace: FONT_B, bold: true, margin: 0
     });
     s.addText("WHO  " + p.who, {
       x: x + 0.15, y: y + 0.8, w: 2.6, h: 0.35,
@@ -1342,7 +1342,7 @@ makeDivider("04", "고객 응대 프로세스",
 
   s.addText("Tip — 5가지 유형 중 \"E. 둘러보기형\"이 사실 가장 큰 기회. 압박 없는 응대 + 명함은 재방문률을 가장 크게 높입니다.", {
     x: 0.5, y: 5.1, w: 9, h: 0.3,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 26, "Part 4 · 페르소나");
@@ -1392,13 +1392,13 @@ makeDivider("04", "고객 응대 프로세스",
     s.addText(st.goal, {
       x: x + 0.1, y: y + 2.4, w: 1.55, h: 0.4,
       fontSize: 10, color: C.goldDeep, fontFace: FONT_B,
-      bold: true, italic: false, align: "center", margin: 0
+      bold: true, bold: true, align: "center", margin: 0
     });
   });
 
   s.addText("핵심 — 5단계는 \"순서\"이지만 정해진 시간이 없습니다. 단계 사이에 머무르는 시간이 신뢰를 결정합니다.", {
     x: 0.5, y: 4.85, w: 9, h: 0.4,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 27, "Part 4 · 5단계 응대");
@@ -1414,7 +1414,7 @@ makeDivider("04", "고객 응대 프로세스",
 
   s.addText("입장 즉시 달려가지 마세요. 3분간 자율 관람 → 매니저는 자연스럽게 동선 안에서 등장.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const lines = [
@@ -1433,7 +1433,7 @@ makeDivider("04", "고객 응대 프로세스",
     });
     s.addText(l.good, {
       x: 0.95, y, w: 5.9, h: 0.4,
-      fontSize: 12, color: C.ink, fontFace: FONT_H, italic: false, margin: 0
+      fontSize: 12, color: C.ink, fontFace: FONT_H, bold: true, margin: 0
     });
     s.addText(l.note, {
       x: 6.95, y, w: 2.5, h: 0.4,
@@ -1464,7 +1464,7 @@ makeDivider("04", "고객 응대 프로세스",
 
   s.addText("이 4가지만 자연스럽게 물어보면, 추천이 거의 정해집니다.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 13, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 13, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const qs = [
@@ -1507,7 +1507,7 @@ makeDivider("04", "고객 응대 프로세스",
     });
     s.addText(q.ask, {
       x: x + 0.2, y: y + 0.5, w: 4.0, h: 0.4,
-      fontSize: 11.5, color: C.goldDeep, fontFace: FONT_H, italic: false, margin: 0
+      fontSize: 11.5, color: C.goldDeep, fontFace: FONT_H, bold: true, margin: 0
     });
     s.addText("→ " + q.learn, {
       x: x + 0.2, y: y + 0.92, w: 4.0, h: 0.4,
@@ -1528,7 +1528,7 @@ makeDivider("04", "고객 응대 프로세스",
 
   s.addText("침대 매장의 진실 — 누워본 고객의 구매 전환율이 안 누워본 고객의 3배.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 14, color: C.goldDeep, fontFace: FONT_H, bold: true, italic: false, margin: 0
+    fontSize: 14, color: C.goldDeep, fontFace: FONT_H, bold: true, bold: true, margin: 0
   });
 
   const mentions = [
@@ -1557,13 +1557,13 @@ makeDivider("04", "고객 응대 프로세스",
     s.addText(m.line, {
       x: 2.6, y, w: 6.85, h: 0.45,
       fontSize: 11.5, color: C.ink, fontFace: FONT_B,
-      italic: false, valign: "middle", margin: 0
+      bold: true, valign: "middle", margin: 0
     });
   });
 
   s.addText("Tip — 체험 중에는 가급적 말을 줄이세요. 고객이 자기 몸의 신호를 듣는 시간입니다.", {
     x: 0.5, y: 4.85, w: 9, h: 0.4,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 30, "Part 4 · 체험 유도");
@@ -1579,7 +1579,7 @@ makeDivider("04", "고객 응대 프로세스",
 
   s.addText("두 사람을 한 명처럼 응대하면 실패. 한 명씩 \"보이게\" 응대하면 성공.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 13, color: C.goldDeep, fontFace: FONT_H, italic: false, bold: true, margin: 0
+    fontSize: 13, color: C.goldDeep, fontFace: FONT_H, bold: true, bold: true, margin: 0
   });
 
   const rules = [
@@ -1652,7 +1652,7 @@ makeDivider("05", "세일즈 스크립트 & 거절 처리",
     s.addText(`"${o}"`, {
       x: 1.3, y, w: 7.0, h: 0.42,
       fontSize: 13, color: C.ink, fontFace: FONT_B,
-      italic: false, valign: "middle", margin: 0
+      bold: true, valign: "middle", margin: 0
     });
     s.addText("→ 다음 페이지", {
       x: 8.3, y, w: 1.1, h: 0.42,
@@ -1675,7 +1675,7 @@ function makeObjectionSlide(num, page, objection, kicker, badAns, goodAns, why) 
   s.addText(kicker, {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
     fontSize: 13, color: C.gold, fontFace: FONT_H,
-    italic: false, bold: true, margin: 0
+    bold: true, bold: true, margin: 0
   });
 
   // 나쁜 답 박스
@@ -1691,7 +1691,7 @@ function makeObjectionSlide(num, page, objection, kicker, badAns, goodAns, why) 
   s.addText(badAns, {
     x: 0.65, y: 2.4, w: 4.0, h: 1.05,
     fontSize: 11, color: C.inkSoft, fontFace: FONT_B,
-    italic: false, margin: 0
+    bold: true, margin: 0
   });
 
   // 좋은 답 박스
@@ -1707,7 +1707,7 @@ function makeObjectionSlide(num, page, objection, kicker, badAns, goodAns, why) 
   s.addText(goodAns, {
     x: 5.35, y: 2.4, w: 4.0, h: 1.05,
     fontSize: 11, color: C.ink, fontFace: FONT_B,
-    italic: false, margin: 0
+    bold: true, margin: 0
   });
 
   // 왜?
@@ -1801,12 +1801,12 @@ makeObjectionSlide(
     "→ \"이사 일정이 언제세요? 침대는 보통 이사 2~4주 전에 주문하셔야 입주일에 받으실 수 있어요.\n오늘 결정 안 하셔도 되는데, 일정만 알려주시면 제가 챙겨서 연락드릴게요.\"",
     {
       x: 0.7, y: 1.9, w: 8.6, h: 0.7,
-      fontSize: 11, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+      fontSize: 11, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
     }
   );
   s.addText("WHY — \"이사할 때 다시\"는 90% 안 옵니다. 연락처를 얻고 능동적으로 추적하세요. CRM 입력 필수.", {
     x: 0.7, y: 2.65, w: 8.6, h: 0.5,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, bold: true, margin: 0
   });
 
   // #7 멀쩡함
@@ -1822,12 +1822,12 @@ makeObjectionSlide(
     "→ \"몇 년 쓰셨어요? … 7년이면 거의 교체 시점이세요. 매트리스는 안 꺼져도 위생적으로 진드기·먼지가 누적되거든요.\n저희 누어 든든 토퍼만 얹어도 완전히 다른 잠을 느끼세요. 매트리스 교체보다 부담 적고요.\"",
     {
       x: 0.7, y: 3.9, w: 8.6, h: 0.7,
-      fontSize: 11, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+      fontSize: 11, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
     }
   );
   s.addText("WHY — \"멀쩡함\"은 \"바꿀 이유 없음\"이 아니라 \"바꿀 동기 부족\". 위생·토퍼 업셀로 부드럽게 진입.", {
     x: 0.7, y: 4.65, w: 8.6, h: 0.5,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, bold: true, margin: 0
   });
 
   addFooter(s, 39, "Part 5 · 거절 #6 #7");
@@ -1888,13 +1888,13 @@ makeObjectionSlide(
     s.addText(c.line, {
       x: 0.7, y: y + 0.45, w: 8.6, h: 0.55,
       fontSize: 12, color: C.goldDeep, fontFace: FONT_H,
-      italic: false, margin: 0
+      bold: true, margin: 0
     });
   });
 
   s.addText("Tip — 클로징은 \"강요\"가 아니라 \"정리\"입니다. 고객 머릿속에 흩어진 선택지를 매니저가 한 번에 묶어주는 일.", {
     x: 0.5, y: 5.0, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 40, "Part 5 · 클로징");
@@ -1954,7 +1954,7 @@ makeDivider("06", "TOP 매니저 케이스 & 모범 사례",
 
   s.addText("핵심 — 7가지 모두 한 줄로 묶으면 \"고객을 존중한다\"입니다. 기술이 아니라 태도가 본질입니다.", {
     x: 0.5, y: 4.85, w: 9, h: 0.4,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 42, "Part 6 · 7가지 행동");
@@ -1990,7 +1990,7 @@ function makeCaseSlide(num, page, title, situation, action, result, lesson) {
   });
   s.addText(action, {
     x: 0.7, y: 3.5, w: 5.0, h: 1.55,
-    fontSize: 11, color: C.ink, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.ink, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 우측: 결과 + 교훈
@@ -2019,7 +2019,7 @@ function makeCaseSlide(num, page, title, situation, action, result, lesson) {
   });
   s.addText(lesson, {
     x: 6.2, y: 3.7, w: 3.2, h: 1.3,
-    fontSize: 11, color: C.ink, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.ink, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, page, `Part 6 · 케이스 #${num}`);
@@ -2108,13 +2108,13 @@ makeCaseSlide(
     s.addText(l, {
       x: x + 0.2, y, w: 4.05, h: 0.75,
       fontSize: 11, color: C.ink, fontFace: FONT_B,
-      italic: false, valign: "middle", margin: 0
+      bold: true, valign: "middle", margin: 0
     });
   });
 
   s.addText("→ 이 8개 멘트를 자기 말로 다시 적어 외워두세요. 매장 즉시 사용 가능한 \"현장 무기\"입니다.", {
     x: 0.5, y: 5.0, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, bold: true, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, bold: true, margin: 0
   });
 
   addFooter(s, 46, "Part 6 · 베스트 멘트");
@@ -2130,7 +2130,7 @@ makeCaseSlide(
 
   s.addText("매일 마감 후, 이 10가지를 자신에게 물어보세요. 7개 이상 YES면 좋은 하루입니다.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const checks = [
@@ -2215,7 +2215,7 @@ makeDivider("07", "운영 · KPI · 부록",
 
   s.addText("재구매·추천 고객은 신규 고객 획득 비용의 1/5. CRM은 매장 매니저의 \"개인 자산\"입니다.", {
     x: 0.5, y: 4.95, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, bold: true, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, bold: true, margin: 0
   });
 
   addFooter(s, 49, "Part 7 · 사후 관리");
@@ -2276,7 +2276,7 @@ makeDivider("07", "운영 · KPI · 부록",
 
   s.addText("운영 — 본사는 분기마다 매니저별 KPI 대시보드 제공. 1:1 코칭은 분기 1회 정례.", {
     x: 0.5, y: 4.95, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 50, "Part 7 · KPI");
@@ -2324,7 +2324,7 @@ makeDivider("07", "운영 · KPI · 부록",
 
   s.addText("→ 본사 매니저 채널에서 \"FAQ Top 30 상세 답변집\" 별도 배포. 응대 중 모르는 질문은 절대 답하지 말고 \"확인 후 안내\"하세요.", {
     x: 0.5, y: 5.05, w: 9, h: 0.3,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 51, "Part 7 · FAQ");
@@ -2437,7 +2437,7 @@ makeDivider("08", "인증 & 안전성",
 
   s.addText("매니저 핵심 — 이 표만 외워두면, 고객이 어떤 안전 질문을 해도 답할 수 있습니다.", {
     x: 0.5, y: 5.0, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 54, "Part 8 · 인증 종합");
@@ -2453,7 +2453,7 @@ makeDivider("08", "인증 & 안전성",
 
   s.addText("최근 침대 시장에서 가장 민감한 이슈는 \"라돈\". 우리는 모든 매트리스에 대해 한국 공인기관 시험을 받았습니다.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const lines = [
@@ -2502,7 +2502,7 @@ makeDivider("08", "인증 & 안전성",
   });
   s.addText("\"저희는 모든 매트리스에 대해 한국 공인기관에서 라돈 시험을 받았습니다. 시험성적서 보여드릴 수 있어요.\"", {
     x: 0.7, y: 4.85, w: 8.6, h: 0.3,
-    fontSize: 11, color: C.white, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.white, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 55, "Part 8 · 라돈");
@@ -2585,7 +2585,7 @@ makeDivider("08", "인증 & 안전성",
 
   s.addText("Tip — 메모리폼은 \"밀도\"가 핵심 품질 지표. 우리 100K = 시중 50K의 2배 밀도, 그만큼 오래갑니다.", {
     x: 0.5, y: 4.85, w: 9, h: 0.4,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 56, "Part 8 · 폼 · 라텍스");
@@ -2609,7 +2609,7 @@ makeDivider("08", "인증 & 안전성",
   });
   s.addText("\"매트리스는 접착제만 안전하면 됩니다.\"", {
     x: 0.7, y: 1.95, w: 4, h: 0.35,
-    fontSize: 11, color: C.gold, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.gold, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const glues = [
@@ -2643,7 +2643,7 @@ makeDivider("08", "인증 & 안전성",
   });
   s.addText("\"좋은 매트리스는 좋은 공장에서 나옵니다.\"", {
     x: 5.4, y: 1.95, w: 4, h: 0.35,
-    fontSize: 11, color: C.line, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.line, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const factory = [
@@ -2680,7 +2680,7 @@ makeDivider("08", "인증 & 안전성",
 
   s.addText("누어는 \"합리적\"이지만 \"덜 안전한\" 매트리스가 아닙니다. 본사가 자신 있게 30일 트라이얼을 제공하는 이유.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const certs = [
@@ -2715,7 +2715,7 @@ makeDivider("08", "인증 & 안전성",
 
   s.addText("매니저 무기 — \"누어가 왜 합리적인 가격인지 아세요? 국내 직접 생산 + 마케팅 비용 줄여서, 인증은 그대로입니다.\"", {
     x: 0.5, y: 4.95, w: 9, h: 0.3,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 58, "Part 8 · 누어 인증");
@@ -2731,7 +2731,7 @@ makeDivider("08", "인증 & 안전성",
 
   s.addText("자녀를 위한 침대는 \"좋아 보이는 것\"이 아니라 \"증명된 것\"이어야 합니다. 토들즈 버터 매트리스 3종(마일드·멜티·퓨어)은 다음 인증을 모두 통과했습니다.", {
     x: 0.5, y: 1.35, w: 9, h: 0.6,
-    fontSize: 11, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const safety = [
@@ -2805,7 +2805,7 @@ makeDivider("08", "인증 & 안전성",
   });
   s.addText("\"베개도 인증이 있다는 사실, 매니저만 압니다.\"", {
     x: 5.4, y: 1.95, w: 4, h: 0.35,
-    fontSize: 11, color: C.line, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.line, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const pillow = [
@@ -2843,7 +2843,7 @@ makeDivider("08", "인증 & 안전성",
 
   s.addText("슬립퍼 패브릭 침대는 \"디자인이 예쁘다\"로 끝나면 절반만 설명한 것. 원단까지 인증서로 채웠습니다.", {
     x: 0.5, y: 1.4, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const fabric = [
@@ -2902,7 +2902,7 @@ makeObjectionSlide(
 
   s.addText("슬립퍼는 \"한 라인 안에 등급\"이 있어요. 같은 시그니처라도 예산·니즈에 따라 프레스티지·프라임·익스클루시브를 권할 수 있습니다.", {
     x: 0.5, y: 1.35, w: 9, h: 0.5,
-    fontSize: 11, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   const grades = [
@@ -2951,7 +2951,7 @@ makeObjectionSlide(
 
   s.addText("매니저 클로징 무기 — 고객이 \"프레스티지가 너무 비싸요\" → \"같은 시그니처 라인의 프라임도 똑같은 인증·1:1 맞춤이세요\"", {
     x: 0.5, y: 4.95, w: 9, h: 0.3,
-    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10.5, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 63, "Part 8 · 등급 체계");
@@ -2967,7 +2967,7 @@ makeObjectionSlide(
 
   s.addText("이 슬라이드를 인쇄·라미네이트해서 매장에 비치하세요. 고객 응대 중 즉시 꺼내 보여드릴 한 장.", {
     x: 0.5, y: 1.35, w: 9, h: 0.4,
-    fontSize: 11, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   s.addShape(pres.shapes.RECTANGLE, {
@@ -3018,7 +3018,7 @@ makeObjectionSlide(
   s.addText("\"고객님 안전 인증서, 보여드릴게요.\"  ·  1644-4766", {
     x: 0.5, y: 5.0, w: 9, h: 0.3,
     fontSize: 11, color: C.goldDeep, fontFace: FONT_B,
-    italic: false, bold: true, align: "center", margin: 0
+    bold: true, bold: true, align: "center", margin: 0
   });
 
   addFooter(s, 64, "Part 8 · 휴대 카드");
@@ -3067,7 +3067,7 @@ makeObjectionSlide(
 
   s.addText("핵심 — 인증은 \"방어\"가 아니라 \"공격\". 고객이 묻기 전에 우리가 먼저 보여주면, 프리미엄 가격이 정당화됩니다.", {
     x: 0.5, y: 5.0, w: 9, h: 0.3,
-    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, italic: false, bold: true, margin: 0
+    fontSize: 11, color: C.goldDeep, fontFace: FONT_B, bold: true, bold: true, margin: 0
   });
 
   addFooter(s, 65, "Part 8 · 활용 원칙");
@@ -3092,7 +3092,7 @@ makeDivider("09", "배송 실무 가이드",
 
   s.addText("고객이 매장에서 가장 자주 묻는 질문 — \"우리 집에 들어와요?\" 엘리베이터 인승을 먼저 확인하세요.", {
     x: 0.5, y: 1.35, w: 9, h: 0.4,
-    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 12, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 엘리베이터 표
@@ -3148,7 +3148,7 @@ makeDivider("09", "배송 실무 가이드",
   });
   s.addText("엘리베이터 인증이 동일하더라도 내부 크기·출입문 너비 등 실제 규격에 따라 반입 가능 여부가 다를 수 있습니다.\n사전 확인 안내: \"고객님, 엘리베이터 내부 가로·세로·출입문 너비를 알려주시면 더 정확히 안내드릴 수 있어요.\"", {
     x: 0.7, y: 4.78, w: 8.6, h: 0.55,
-    fontSize: 10, color: C.white, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10, color: C.white, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 67, "Part 9 · 엘리베이터");
@@ -3257,7 +3257,7 @@ makeDivider("09", "배송 실무 가이드",
 
   s.addText("고객이 \"제 침대 어디까지 왔어요?\" 물으면, 매니저는 즉시 송장상태로 답해야 합니다.", {
     x: 0.5, y: 1.4, w: 9, h: 0.35,
-    fontSize: 11, color: C.inkSoft, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 11, color: C.inkSoft, fontFace: FONT_B, bold: true, margin: 0
   });
 
   // 좌측: 조회 경로
@@ -3327,7 +3327,7 @@ makeDivider("09", "배송 실무 가이드",
   // 하단 Tip
   s.addText("Tip — 주문승인은 지정일 -1일 오전 11시 이전. 배송일정상담 의뢰 건은 임시로 지정일 \"2099년\" 표시, 해피콜 후 변경됩니다.", {
     x: 0.5, y: 5.1, w: 9, h: 0.3,
-    fontSize: 10, color: C.goldDeep, fontFace: FONT_B, italic: false, margin: 0
+    fontSize: 10, color: C.goldDeep, fontFace: FONT_B, bold: true, margin: 0
   });
 
   addFooter(s, 69, "Part 9 · 오늘의집 조회");
@@ -3364,7 +3364,7 @@ makeDivider("09", "배송 실무 가이드",
     {
       x: 0.5, y: 3.6, w: 9, h: 0.9,
       fontSize: 15, color: C.line, fontFace: FONT_B,
-      italic: false, margin: 0
+      bold: true, margin: 0
     }
   );
 
