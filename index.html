@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>오가렌 매장 매니저 교육 · 세일즈 가이드</title>
+<meta name="description" content="오가렌 오프라인 쇼룸 매니저 교육과 세일즈 가이드. 우리는 그래서 잘 잔다(세션1) + 그래서 잘 판다(세션2)." />
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --brand: #1F4E79;
+  --brand2: #2E75B6;
+  --accent: #C5504B;
+  --bg: #F7F9FC;
+  --card: #FFFFFF;
+  --text: #1B2737;
+  --muted: #5B6B80;
+  --border: #E1E8F0;
+  --shadow: 0 4px 16px rgba(31,78,121,0.08);
+  --shadow-lg: 0 12px 32px rgba(31,78,121,0.18);
+}
+html, body { font-family: 'Malgun Gothic','Apple SD Gothic Neo','Pretendard',system-ui,sans-serif; color: var(--text); background: var(--bg); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+a { color: var(--brand2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== Index ===== */
+.hero { background: linear-gradient(135deg, #1F4E79 0%, #2E75B6 100%); color: #fff; padding: 72px 0 64px; }
+.hero .container { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.hero h1 { font-size: 38px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
+.hero h1 .accent { color: #FFD966; }
+.hero .sub { font-size: 16px; opacity: 0.85; }
+.hero .meta { font-size: 13px; opacity: 0.75; text-align: right; }
+.hero .meta b { font-weight: 600; }
+
+.sessions { padding: 56px 0; }
+.sessions h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--brand); }
+.sessions .lead { color: var(--muted); margin-bottom: 32px; font-size: 15px; }
+.session-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 800px) { .session-grid { grid-template-columns: 1fr; } }
+.session-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; box-shadow: var(--shadow); transition: transform .15s, box-shadow .15s; cursor: pointer; display: block; }
+.session-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); text-decoration: none; }
+.session-card .num { font-size: 13px; font-weight: 600; color: var(--brand2); letter-spacing: 1px; text-transform: uppercase; }
+.session-card h3 { font-size: 26px; font-weight: 700; color: var(--brand); margin: 8px 0 12px; }
+.session-card .tag { display: inline-block; background: #F0F4FA; color: var(--brand); font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; margin-bottom: 16px; }
+.session-card .parts { list-style: none; margin-top: 12px; }
+.session-card .parts li { font-size: 14px; color: var(--muted); padding: 4px 0; }
+.session-card .parts li::before { content: "·"; color: var(--brand2); font-weight: 700; margin-right: 8px; }
+.session-card .footer { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+.session-card .count { font-size: 13px; color: var(--muted); }
+.session-card .go { font-size: 14px; font-weight: 600; color: var(--brand2); }
+
+.downloads { padding: 24px 0 80px; }
+.downloads .panel { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: var(--shadow); }
+.downloads h3 { font-size: 17px; color: var(--brand); margin-bottom: 12px; }
+.downloads ul { list-style: none; }
+.downloads li { padding: 6px 0; font-size: 14px; }
+.downloads li::before { content: "↓ "; color: var(--brand2); font-weight: 700; }
+
+.footer { padding: 24px 0; text-align: center; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); background: var(--card); }
+
+/* ===== Session viewer ===== */
+.topbar { background: var(--card); border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+.topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.topbar .back { font-size: 14px; color: var(--muted); }
+.topbar .title { font-size: 16px; font-weight: 700; color: var(--brand); }
+.topbar .download { font-size: 13px; padding: 6px 12px; background: var(--brand); color: #fff; border-radius: 6px; font-weight: 600; }
+.topbar .download:hover { background: var(--brand2); text-decoration: none; }
+
+.layout { display: grid; grid-template-columns: 240px 1fr; gap: 32px; padding: 32px 0; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+.sidebar { position: sticky; top: 80px; align-self: start; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; box-shadow: var(--shadow); max-height: calc(100vh - 100px); overflow-y: auto; }
+.sidebar h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 12px; }
+.sidebar ul { list-style: none; }
+.sidebar li a { display: block; padding: 8px 10px; font-size: 13.5px; color: var(--text); border-radius: 6px; border-left: 3px solid transparent; }
+.sidebar li a:hover { background: #F0F4FA; color: var(--brand); text-decoration: none; border-left-color: var(--brand2); }
+
+.main { min-width: 0; }
+.part-section { margin-bottom: 48px; scroll-margin-top: 80px; }
+.part-section h2 { font-size: 22px; font-weight: 700; color: var(--brand); margin-bottom: 4px; }
+.part-section .part-desc { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+
+.slide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+@media (max-width: 700px) { .slide-grid { grid-template-columns: 1fr; } }
+.slide-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); cursor: zoom-in; transition: transform .15s, box-shadow .15s; }
+.slide-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.slide-card .thumb { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #f0f0f0; }
+.slide-card .meta { padding: 10px 14px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.slide-card .meta b { color: var(--text); font-weight: 600; font-size: 13.5px; flex: 1; }
+.slide-card .meta .n { font-size: 11px; background: #F0F4FA; color: var(--brand); padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+
+/* Lightbox */
+.lb { position: fixed; inset: 0; background: rgba(15,25,40,0.92); display: none; align-items: center; justify-content: center; z-index: 100; padding: 24px; }
+.lb.open { display: flex; }
+.lb img { max-width: 100%; max-height: 90vh; box-shadow: 0 30px 80px rgba(0,0,0,0.5); border-radius: 6px; }
+.lb .close, .lb .nav { position: absolute; color: #fff; background: rgba(255,255,255,0.12); border: none; cursor: pointer; font-size: 22px; width: 48px; height: 48px; border-radius: 999px; display: flex; align-items: center; justify-content: center; }
+.lb .close:hover, .lb .nav:hover { background: rgba(255,255,255,0.22); }
+.lb .close { top: 20px; right: 20px; }
+.lb .prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.lb .next { right: 20px; top: 50%; transform: translateY(-50%); }
+.lb .counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 13px; opacity: 0.7; }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="container">
+      <div>
+        <h1>오가렌 매장 매니저<br/><span class="accent">교육 · 세일즈 가이드</span></h1>
+        <p class="sub">오프라인 쇼룸 운영을 위한 통합 교육 자료</p>
+      </div>
+      <div class="meta">
+        <div><b>Edition</b> v2.1</div>
+        <div><b>Updated</b> 2026-05-21</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sessions">
+    <div class="container">
+      <h2>두 세션으로 구성</h2>
+      <p class="lead">세션 1에서 제품과 안전성을 익히고, 세션 2에서 실제 응대·세일즈·운영을 배웁니다.</p>
+      <div class="session-grid">
+        <a class="session-card" href="session1.html">
+          <div class="num">Session 01</div>
+          <h3>우리는 그래서 잘 잔다</h3>
+          <span class="tag">제품 · 인증 · 안전성</span>
+          <ul class="parts">
+            <li>Part 1 · 오가렌과 3대 브랜드</li>
+            <li>Part 2 · 매트리스 마스터하기</li>
+            <li>Part 3 · 침대 프레임 마스터하기</li>
+            <li>Part 4 · 인증 & 안전성</li>
+          </ul>
+          <div class="footer"><span class="count">38개 슬라이드</span><span class="go">바로 보기 →</span></div>
+        </a>
+        <a class="session-card" href="session2.html">
+          <div class="num">Session 02</div>
+          <h3>그래서 잘 판다</h3>
+          <span class="tag">응대 · 세일즈 · 운영</span>
+          <ul class="parts">
+            <li>Part 1 · 고객 응대 프로세스</li>
+            <li>Part 2 · 세일즈 스크립트 & 거절 처리</li>
+            <li>Part 3 · TOP 매니저 케이스 (실명)</li>
+            <li>Part 4 · 운영 · KPI · 부록</li>
+            <li>Part 5 · 배송 실무 가이드</li>
+          </ul>
+          <div class="footer"><span class="count">38개 슬라이드</span><span class="go">바로 보기 →</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="downloads">
+    <div class="container">
+      <div class="panel">
+        <h3>원본 PPT 다운로드</h3>
+        <ul>
+          <li><a href="assets/download/오가렌_세일즈가이드_세션1.pptx">세션 1 PPT (우리는 그래서 잘 잔다)</a></li>
+          <li><a href="assets/download/오가렌_세일즈가이드_세션2.pptx">세션 2 PPT (그래서 잘 판다)</a></li>
+          <li><a href="assets/download/오가렌_매니저_교육_세일즈_가이드_v2.1.pptx">통합본 (v2.1, 전체 70슬라이드)</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 오가렌 DX팀 · 매니저 교육 · v2.1 · last updated 2026-05-21</div>
+  </footer>
+</body>
+</html>

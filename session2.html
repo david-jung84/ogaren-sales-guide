@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>세션 2 · 그래서 잘 판다 | 오가렌 매니저 교육</title>
+<meta name="description" content="오가렌 매니저 교육 · 세션 2 · 그래서 잘 판다" />
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --brand: #1F4E79;
+  --brand2: #2E75B6;
+  --accent: #C5504B;
+  --bg: #F7F9FC;
+  --card: #FFFFFF;
+  --text: #1B2737;
+  --muted: #5B6B80;
+  --border: #E1E8F0;
+  --shadow: 0 4px 16px rgba(31,78,121,0.08);
+  --shadow-lg: 0 12px 32px rgba(31,78,121,0.18);
+}
+html, body { font-family: 'Malgun Gothic','Apple SD Gothic Neo','Pretendard',system-ui,sans-serif; color: var(--text); background: var(--bg); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+a { color: var(--brand2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== Index ===== */
+.hero { background: linear-gradient(135deg, #1F4E79 0%, #2E75B6 100%); color: #fff; padding: 72px 0 64px; }
+.hero .container { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.hero h1 { font-size: 38px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
+.hero h1 .accent { color: #FFD966; }
+.hero .sub { font-size: 16px; opacity: 0.85; }
+.hero .meta { font-size: 13px; opacity: 0.75; text-align: right; }
+.hero .meta b { font-weight: 600; }
+
+.sessions { padding: 56px 0; }
+.sessions h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--brand); }
+.sessions .lead { color: var(--muted); margin-bottom: 32px; font-size: 15px; }
+.session-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 800px) { .session-grid { grid-template-columns: 1fr; } }
+.session-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; box-shadow: var(--shadow); transition: transform .15s, box-shadow .15s; cursor: pointer; display: block; }
+.session-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); text-decoration: none; }
+.session-card .num { font-size: 13px; font-weight: 600; color: var(--brand2); letter-spacing: 1px; text-transform: uppercase; }
+.session-card h3 { font-size: 26px; font-weight: 700; color: var(--brand); margin: 8px 0 12px; }
+.session-card .tag { display: inline-block; background: #F0F4FA; color: var(--brand); font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; margin-bottom: 16px; }
+.session-card .parts { list-style: none; margin-top: 12px; }
+.session-card .parts li { font-size: 14px; color: var(--muted); padding: 4px 0; }
+.session-card .parts li::before { content: "·"; color: var(--brand2); font-weight: 700; margin-right: 8px; }
+.session-card .footer { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+.session-card .count { font-size: 13px; color: var(--muted); }
+.session-card .go { font-size: 14px; font-weight: 600; color: var(--brand2); }
+
+.downloads { padding: 24px 0 80px; }
+.downloads .panel { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: var(--shadow); }
+.downloads h3 { font-size: 17px; color: var(--brand); margin-bottom: 12px; }
+.downloads ul { list-style: none; }
+.downloads li { padding: 6px 0; font-size: 14px; }
+.downloads li::before { content: "↓ "; color: var(--brand2); font-weight: 700; }
+
+.footer { padding: 24px 0; text-align: center; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); background: var(--card); }
+
+/* ===== Session viewer ===== */
+.topbar { background: var(--card); border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+.topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.topbar .back { font-size: 14px; color: var(--muted); }
+.topbar .title { font-size: 16px; font-weight: 700; color: var(--brand); }
+.topbar .download { font-size: 13px; padding: 6px 12px; background: var(--brand); color: #fff; border-radius: 6px; font-weight: 600; }
+.topbar .download:hover { background: var(--brand2); text-decoration: none; }
+
+.layout { display: grid; grid-template-columns: 240px 1fr; gap: 32px; padding: 32px 0; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+.sidebar { position: sticky; top: 80px; align-self: start; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; box-shadow: var(--shadow); max-height: calc(100vh - 100px); overflow-y: auto; }
+.sidebar h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 12px; }
+.sidebar ul { list-style: none; }
+.sidebar li a { display: block; padding: 8px 10px; font-size: 13.5px; color: var(--text); border-radius: 6px; border-left: 3px solid transparent; }
+.sidebar li a:hover { background: #F0F4FA; color: var(--brand); text-decoration: none; border-left-color: var(--brand2); }
+
+.main { min-width: 0; }
+.part-section { margin-bottom: 48px; scroll-margin-top: 80px; }
+.part-section h2 { font-size: 22px; font-weight: 700; color: var(--brand); margin-bottom: 4px; }
+.part-section .part-desc { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+
+.slide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+@media (max-width: 700px) { .slide-grid { grid-template-columns: 1fr; } }
+.slide-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); cursor: zoom-in; transition: transform .15s, box-shadow .15s; }
+.slide-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.slide-card .thumb { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #f0f0f0; }
+.slide-card .meta { padding: 10px 14px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.slide-card .meta b { color: var(--text); font-weight: 600; font-size: 13.5px; flex: 1; }
+.slide-card .meta .n { font-size: 11px; background: #F0F4FA; color: var(--brand); padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+
+/* Lightbox */
+.lb { position: fixed; inset: 0; background: rgba(15,25,40,0.92); display: none; align-items: center; justify-content: center; z-index: 100; padding: 24px; }
+.lb.open { display: flex; }
+.lb img { max-width: 100%; max-height: 90vh; box-shadow: 0 30px 80px rgba(0,0,0,0.5); border-radius: 6px; }
+.lb .close, .lb .nav { position: absolute; color: #fff; background: rgba(255,255,255,0.12); border: none; cursor: pointer; font-size: 22px; width: 48px; height: 48px; border-radius: 999px; display: flex; align-items: center; justify-content: center; }
+.lb .close:hover, .lb .nav:hover { background: rgba(255,255,255,0.22); }
+.lb .close { top: 20px; right: 20px; }
+.lb .prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.lb .next { right: 20px; top: 50%; transform: translateY(-50%); }
+.lb .counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 13px; opacity: 0.7; }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <a href="index.html" class="back">← 메인으로</a>
+      <div class="title">세션 2 · 그래서 잘 판다</div>
+      <a href="assets/download/오가렌_세일즈가이드_세션2.pptx" class="download" download>PPT 다운로드</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="layout">
+      <aside class="sidebar">
+        <h4>목차</h4>
+        <ul><li><a href="#cover">표지</a></li><li><a href="#usage">본 가이드 사용법</a></li><li><a href="#toc">목차</a></li><li><a href="#part1">Part 1 · 고객 응대 프로세스</a></li><li><a href="#part2">Part 2 · 세일즈 스크립트 & 거절 처리</a></li><li><a href="#part3">Part 3 · TOP 매니저 케이스 & 모범 사례</a></li><li><a href="#part4">Part 4 · 운영 · KPI · 부록</a></li><li><a href="#part5">Part 5 · 배송 실무 가이드</a></li><li><a href="#end">마무리</a></li></ul>
+      </aside>
+      <main class="main">
+        <section class="part-section" id="cover"><h2>표지</h2><div class="part-desc">슬라이드 01–01</div><div class="slide-grid"><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_01.png" data-full="assets/session2/slide_01.png" alt="slide 1" /><div class="meta"><b>OGAREN EDUCATION PROGRAM</b><span class="n">#01</span></div></div></div></section><section class="part-section" id="usage"><h2>본 가이드 사용법</h2><div class="part-desc">슬라이드 02–02</div><div class="slide-grid"><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_02.png" data-full="assets/session2/slide_02.png" alt="slide 2" /><div class="meta"><b>HOW TO USE</b><span class="n">#02</span></div></div></div></section><section class="part-section" id="toc"><h2>목차</h2><div class="part-desc">슬라이드 03–03</div><div class="slide-grid"><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_03.png" data-full="assets/session2/slide_03.png" alt="slide 3" /><div class="meta"><b>CONTENTS</b><span class="n">#03</span></div></div></div></section><section class="part-section" id="part1"><h2>Part 1 · 고객 응대 프로세스</h2><div class="part-desc">슬라이드 04–10</div><div class="slide-grid"><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_04.png" data-full="assets/session2/slide_04.png" alt="slide 4" /><div class="meta"><b>PART 01</b><span class="n">#04</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_05.png" data-full="assets/session2/slide_05.png" alt="slide 5" /><div class="meta"><b>5 PERSONAS</b><span class="n">#05</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_06.png" data-full="assets/session2/slide_06.png" alt="slide 6" /><div class="meta"><b>5-STEP PROCESS</b><span class="n">#06</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_07.png" data-full="assets/session2/slide_07.png" alt="slide 7" /><div class="meta"><b>FIRST 3 MINUTES</b><span class="n">#07</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_08.png" data-full="assets/session2/slide_08.png" alt="slide 8" /><div class="meta"><b>NEEDS DISCOVERY</b><span class="n">#08</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_09.png" data-full="assets/session2/slide_09.png" alt="slide 9" /><div class="meta"><b>TRY IT</b><span class="n">#09</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_10.png" data-full="assets/session2/slide_10.png" alt="slide 10" /><div class="meta"><b>COUPLE SCENE</b><span class="n">#10</span></div></div></div></section><section class="part-section" id="part2"><h2>Part 2 · 세일즈 스크립트 & 거절 처리</h2><div class="part-desc">슬라이드 11–19</div><div class="slide-grid"><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_11.png" data-full="assets/session2/slide_11.png" alt="slide 11" /><div class="meta"><b>PART 02</b><span class="n">#11</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_12.png" data-full="assets/session2/slide_12.png" alt="slide 12" /><div class="meta"><b>TOP 7 OBJECTIONS</b><span class="n">#12</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_13.png" data-full="assets/session2/slide_13.png" alt="slide 13" /><div class="meta"><b>OBJECTION #1</b><span class="n">#13</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_14.png" data-full="assets/session2/slide_14.png" alt="slide 14" /><div class="meta"><b>OBJECTION #2</b><span class="n">#14</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_15.png" data-full="assets/session2/slide_15.png" alt="slide 15" /><div class="meta"><b>OBJECTION #3</b><span class="n">#15</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_16.png" data-full="assets/session2/slide_16.png" alt="slide 16" /><div class="meta"><b>OBJECTION #4</b><span class="n">#16</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_17.png" data-full="assets/session2/slide_17.png" alt="slide 17" /><div class="meta"><b>OBJECTION #5</b><span class="n">#17</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_18.png" data-full="assets/session2/slide_18.png" alt="slide 18" /><div class="meta"><b>OBJECTIONS #6, #7</b><span class="n">#18</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_19.png" data-full="assets/session2/slide_19.png" alt="slide 19" /><div class="meta"><b>CLOSING</b><span class="n">#19</span></div></div></div></section><section class="part-section" id="part3"><h2>Part 3 · TOP 매니저 케이스 & 모범 사례</h2><div class="part-desc">슬라이드 20–28</div><div class="slide-grid"><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_20.png" data-full="assets/session2/slide_20.png" alt="slide 20" /><div class="meta"><b>PART 03</b><span class="n">#20</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_21.png" data-full="assets/session2/slide_21.png" alt="slide 21" /><div class="meta"><b>7 BEHAVIORS</b><span class="n">#21</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_22.png" data-full="assets/session2/slide_22.png" alt="slide 22" /><div class="meta"><b>TOP CASE #1 · 전국 1위</b><span class="n">#22</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_23.png" data-full="assets/session2/slide_23.png" alt="slide 23" /><div class="meta"><b>TOP CASE #2 · 전국 2위</b><span class="n">#23</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_24.png" data-full="assets/session2/slide_24.png" alt="slide 24" /><div class="meta"><b>UP-SELLING PROCESS</b><span class="n">#24</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_25.png" data-full="assets/session2/slide_25.png" alt="slide 25" /><div class="meta"><b>SALES BENCHMARK</b><span class="n">#25</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_26.png" data-full="assets/session2/slide_26.png" alt="slide 26" /><div class="meta"><b>MONTHLY UPDATE</b><span class="n">#26</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_27.png" data-full="assets/session2/slide_27.png" alt="slide 27" /><div class="meta"><b>BEST LINES</b><span class="n">#27</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_28.png" data-full="assets/session2/slide_28.png" alt="slide 28" /><div class="meta"><b>SELF-CHECK</b><span class="n">#28</span></div></div></div></section><section class="part-section" id="part4"><h2>Part 4 · 운영 · KPI · 부록</h2><div class="part-desc">슬라이드 29–33</div><div class="slide-grid"><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_29.png" data-full="assets/session2/slide_29.png" alt="slide 29" /><div class="meta"><b>PART 04</b><span class="n">#29</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_30.png" data-full="assets/session2/slide_30.png" alt="slide 30" /><div class="meta"><b>POST-SALE</b><span class="n">#30</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_31.png" data-full="assets/session2/slide_31.png" alt="slide 31" /><div class="meta"><b>MANAGER KPI</b><span class="n">#31</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_32.png" data-full="assets/session2/slide_32.png" alt="slide 32" /><div class="meta"><b>CUSTOMER FAQ</b><span class="n">#32</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_33.png" data-full="assets/session2/slide_33.png" alt="slide 33" /><div class="meta"><b>HQ SUPPORT</b><span class="n">#33</span></div></div></div></section><section class="part-section" id="part5"><h2>Part 5 · 배송 실무 가이드</h2><div class="part-desc">슬라이드 34–37</div><div class="slide-grid"><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_34.png" data-full="assets/session2/slide_34.png" alt="slide 34" /><div class="meta"><b>PART 05</b><span class="n">#34</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_35.png" data-full="assets/session2/slide_35.png" alt="slide 35" /><div class="meta"><b>ELEVATOR GUIDE</b><span class="n">#35</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_36.png" data-full="assets/session2/slide_36.png" alt="slide 36" /><div class="meta"><b>STAIRS · LIFT · WINDOW</b><span class="n">#36</span></div></div><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_37.png" data-full="assets/session2/slide_37.png" alt="slide 37" /><div class="meta"><b>OHOUSE TRACKING</b><span class="n">#37</span></div></div></div></section><section class="part-section" id="end"><h2>마무리</h2><div class="part-desc">슬라이드 38–38</div><div class="slide-grid"><div class="slide-card"><img class="thumb" loading="lazy" src="assets/session2/slide_38.png" data-full="assets/session2/slide_38.png" alt="slide 38" /><div class="meta"><b>CLOSING · 우리의 약속</b><span class="n">#38</span></div></div></div></section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">© 오가렌 DX팀 · 매니저 교육 · v2.1</div>
+  </footer>
+  <script>
+(function(){
+  const cards = Array.from(document.querySelectorAll('.slide-card'));
+  if (!cards.length) return;
+  const lb = document.createElement('div');
+  lb.className = 'lb';
+  lb.innerHTML = `
+    <button class="close" aria-label="닫기">×</button>
+    <button class="nav prev" aria-label="이전">‹</button>
+    <img alt="" />
+    <button class="nav next" aria-label="다음">›</button>
+    <div class="counter"></div>
+  `;
+  document.body.appendChild(lb);
+  const img = lb.querySelector('img');
+  const counter = lb.querySelector('.counter');
+  let idx = 0;
+  function show(i){
+    idx = (i + cards.length) % cards.length;
+    const src = cards[idx].querySelector('img').getAttribute('data-full') || cards[idx].querySelector('img').src;
+    img.src = src;
+    counter.textContent = (idx+1) + ' / ' + cards.length;
+  }
+  function open(i){ show(i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function close(){ lb.classList.remove('open'); document.body.style.overflow = ''; img.src=''; }
+  cards.forEach((c, i) => c.addEventListener('click', () => open(i)));
+  lb.querySelector('.close').onclick = close;
+  lb.querySelector('.prev').onclick = (e) => { e.stopPropagation(); show(idx-1); };
+  lb.querySelector('.next').onclick = (e) => { e.stopPropagation(); show(idx+1); };
+  lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(idx-1);
+    if (e.key === 'ArrowRight') show(idx+1);
+  });
+})();
+</script>
+</body>
+</html>
