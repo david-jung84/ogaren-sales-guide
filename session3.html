@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>세션 3 · 쇼룸·백화점 교육자료 | 오가렌 매니저 교육</title>
-<meta name="description" content="오가렌 쇼룸·백화점 교육자료 — 신규 라인업 3.3.3, 경쟁사 비교, 브랜드·안전성 응대 자료" />
+<meta name="description" content="오가렌 매니저 교육 · 세션 3 · 쇼룸·백화점 교육자료 (제품 라인업 + 경쟁사 비교 + 브랜드·안전성)" />
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
@@ -36,7 +36,6 @@ img { display: block; }
 .container { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
 @media (max-width: 640px) { .container { padding: 0 20px; } }
 
-/* ===== Topbar (carry from existing sessions) ===== */
 .topbar { background: rgba(10,10,11,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 18px 0; position: sticky; top: 0; z-index: 20; }
 .topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .topbar .back { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-2); display: inline-flex; align-items: center; gap: 10px; transition: color .25s ease; }
@@ -50,9 +49,6 @@ img { display: block; }
 .session-hero .kicker { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 24px; }
 .session-hero h1 { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); font-weight: 500; line-height: 1.05; letter-spacing: -1px; }
 .session-hero h1 em { font-style: normal; color: var(--accent); font-weight: 400; }
-.session-hero .lead { font-size: 16px; color: var(--text-2); max-width: 640px; margin-top: 28px; line-height: 1.7; font-weight: 300; }
-.session-hero .meta { margin-top: 28px; display: flex; gap: 36px; flex-wrap: wrap; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-3); }
-.session-hero .meta b { color: var(--text); font-weight: 500; }
 
 .layout { display: grid; grid-template-columns: 240px 1fr; gap: 56px; padding: 32px 0 80px; }
 @media (max-width: 980px) { .layout { grid-template-columns: 1fr; gap: 24px; } }
@@ -67,402 +63,117 @@ img { display: block; }
 .sidebar li a .pnum { font-family: var(--serif); font-style: normal; color: var(--accent-warm); margin-right: 10px; font-size: 12px; letter-spacing: 1px; }
 
 .main { min-width: 0; }
-.part-section { margin-bottom: 72px; scroll-margin-top: 100px; }
-.part-section .part-head { margin-bottom: 14px; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+.part-section { margin-bottom: 80px; scroll-margin-top: 100px; }
+.part-section .part-head { margin-bottom: 32px; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
 .part-section .part-head .pnum { font-family: var(--serif); font-style: normal; font-size: 18px; color: var(--accent-warm); letter-spacing: 1px; }
 .part-section .part-head h2 { font-family: var(--serif); font-size: 36px; font-weight: 500; letter-spacing: -0.5px; line-height: 1.1; flex: 1; min-width: 0; }
 .part-section .part-head .range { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); }
-.part-section .part-sub { font-size: 14px; color: var(--text-3); margin-bottom: 28px; font-weight: 300; }
 
-/* ===== Doc card grid ===== */
-.doc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-@media (max-width: 760px) { .doc-grid { grid-template-columns: 1fr; } }
+.slide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+@media (max-width: 700px) { .slide-grid { grid-template-columns: 1fr; } }
+.slide-card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; cursor: zoom-in; transition: border-color .35s ease, transform .35s ease; }
+.slide-card:hover { border-color: var(--accent-warm); transform: translateY(-3px); }
+.slide-card .thumb-wrap { position: relative; overflow: hidden; }
+.slide-card .thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #1a1a1f; transition: transform .6s cubic-bezier(.2,.6,.2,1); }
+.slide-card:hover .thumb { transform: scale(1.04); }
+.slide-card .num-badge { position: absolute; top: 14px; left: 14px; font-family: var(--serif); font-style: normal; font-size: 13px; color: var(--accent); background: rgba(10,10,11,0.7); backdrop-filter: blur(8px); padding: 4px 10px; border-radius: 2px; letter-spacing: 1px; }
+.slide-card .meta { padding: 16px 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid var(--border); }
+.slide-card .meta b { color: var(--text); font-size: 13px; font-weight: 500; flex: 1; letter-spacing: 0.3px; }
+.slide-card .meta .view { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); }
 
-.doc-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  overflow: hidden;
-  transition: border-color .35s ease, transform .35s ease;
-  display: flex; flex-direction: column;
-}
-.doc-card:hover { border-color: var(--accent-warm); transform: translateY(-3px); }
+.lb { position: fixed; inset: 0; background: rgba(8,8,10,0.96); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 100; padding: 32px; }
+.lb.open { display: flex; }
+.lb img { max-width: 100%; max-height: 88vh; box-shadow: 0 40px 100px rgba(0,0,0,0.7); border: 1px solid var(--border); }
+.lb .close, .lb .nav { position: absolute; color: var(--text); background: rgba(255,255,255,0.06); border: 1px solid var(--border-strong); cursor: pointer; font-size: 18px; width: 48px; height: 48px; border-radius: 999px; display: flex; align-items: center; justify-content: center; transition: background .25s ease, border-color .25s ease; backdrop-filter: blur(10px); }
+.lb .close:hover, .lb .nav:hover { background: rgba(232,220,196,0.1); border-color: var(--accent-warm); color: var(--accent); }
+.lb .close { top: 28px; right: 28px; }
+.lb .prev { left: 28px; top: 50%; transform: translateY(-50%); }
+.lb .next { right: 28px; top: 50%; transform: translateY(-50%); }
+.lb .counter { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); font-family: var(--serif); font-style: normal; font-size: 14px; color: var(--text-2); letter-spacing: 2px; }
+.lb .counter b { color: var(--accent); font-weight: 500; font-style: normal; }
 
-.doc-card .thumb-wrap { position: relative; aspect-ratio: 16/9; background: #1a1a1f; overflow: hidden; border-bottom: 1px solid var(--border); }
-.doc-card .thumb { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.6,.2,1); }
-.doc-card:hover .thumb { transform: scale(1.04); }
-.doc-card .thumb-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1c1c22, #15151a); }
-.doc-card .thumb-fallback .ext { font-family: var(--serif); font-size: 56px; color: var(--accent-warm); letter-spacing: 4px; }
-.doc-card .ext-badge { position: absolute; top: 14px; left: 14px; font-family: var(--serif); font-style: normal; font-size: 12px; color: var(--accent); background: rgba(10,10,11,0.7); backdrop-filter: blur(8px); padding: 4px 10px; border-radius: 2px; letter-spacing: 2px; }
-
-.doc-card .body { padding: 24px 26px 26px; display: flex; flex-direction: column; flex: 1; }
-.doc-card h3 { font-family: var(--serif); font-size: 24px; font-weight: 500; line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 10px; }
-.doc-card .desc { font-size: 13px; color: var(--text-3); line-height: 1.55; font-weight: 300; min-height: 40px; }
-.doc-card .meta-row { display: flex; gap: 14px; margin: 18px 0 20px; padding-top: 16px; border-top: 1px solid var(--border); flex-wrap: wrap; }
-.doc-card .meta-row .meta-i { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-3); }
-.doc-card .meta-row .meta-i + .meta-i { padding-left: 14px; border-left: 1px solid var(--border); }
-.doc-card .actions { display: flex; gap: 10px; margin-top: auto; }
-
-.btn {
-  flex: 1;
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
-  padding: 13px 16px; border: 1px solid var(--border-strong); border-radius: 2px;
-  color: var(--text-2); background: transparent;
-  transition: border-color .25s ease, color .25s ease, background .25s ease;
-}
-.btn:hover { border-color: var(--accent-warm); color: var(--accent); background: var(--surface-2); }
-.btn .arr { color: var(--accent); transition: transform .25s ease; }
-.btn:hover .arr { transform: translateX(2px); }
-.btn-primary { background: var(--accent); color: #0A0A0B; border-color: var(--accent); }
-.btn-primary .arr { color: #0A0A0B; }
-.btn-primary:hover { background: var(--accent-warm); color: #0A0A0B; border-color: var(--accent-warm); }
-
-/* ===== Footer ===== */
-.footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 20px; }
+.footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; }
 .footer .container { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 12px; letter-spacing: 1px; color: var(--text-3); }
 .footer .brand-mark { font-family: var(--serif); font-size: 14px; letter-spacing: 1px; color: var(--text-2); }
-.footer em { font-style: normal; }
 
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
-  <header class="topbar">
+  <div class="topbar">
     <div class="container">
-      <a class="back" href="index.html">← All Sessions</a>
-      <div class="title">Session <em>03</em> · 쇼룸·백화점 교육자료</div>
-      <a class="download" href="https://drive.google.com/drive/folders/" target="_blank" rel="noopener">↗ Drive 원본</a>
+      <a href="index.html" class="back">← Back to Index</a>
+      <div class="title"><em>Session</em> 03 · 쇼룸·백화점 교육자료</div>
+      <a href="https://drive.google.com/drive/folders/" target="_blank" rel="noopener" class="download">↗ Drive 원본</a>
     </div>
-  </header>
+  </div>
 
   <section class="session-hero">
     <div class="container reveal">
-      <div class="kicker">Session 03 · Product Library</div>
+      <div class="kicker">Session 03 · Product Library · Lineup · Reference</div>
       <h1>쇼룸·백화점<br/><em>교육자료.</em></h1>
-      <p class="lead">신규 라인업 3.3.3과 경쟁사 비교, 브랜드·안전성 응대 자료까지 — 쇼룸과 백화점 매장에서 그대로 꺼내 쓸 수 있는 PDF 라이브러리입니다.</p>
-      <div class="meta">
-        <div><b>11</b> Docs</div>
-        <div><b>4</b> 신규 라인업</div>
-        <div><b>2025-12</b> 기준</div>
-      </div>
     </div>
   </section>
 
   <div class="container">
     <div class="layout">
-      <aside class="sidebar reveal">
-        <h4>Index</h4>
-        <ul>
-        <li><a href="#lineup"><em class="pnum">Part 01</em>신규 라인업 3.3.3</a></li>
-        <li><a href="#compare"><em class="pnum">Part 02</em>경쟁사 비교 자료</a></li>
-        <li><a href="#brand"><em class="pnum">Part 03</em>브랜드 · 분류 자료</a></li>
-        <li><a href="#safety"><em class="pnum">Part 04</em>안전성</a></li>
-        <li><a href="#pillow"><em class="pnum">Part 05</em>베개</a></li>
-        <li><a href="#bed"><em class="pnum">Part 06</em>침대 프레임</a></li>
-        </ul>
+      <aside class="sidebar">
+        <h4>— Contents</h4>
+        <ul><li><a href="#cover">표지</a></li><li><a href="#signature"><span class="pnum">01</span>시그니처 매트리스</a></li><li><a href="#hybrid"><span class="pnum">02</span>하이브리드 매트리스</a></li><li><a href="#stable"><span class="pnum">03</span>스테이블 매트리스</a></li><li><a href="#balanced"><span class="pnum">04</span>밸런스드 매트리스</a></li><li><a href="#compete"><span class="pnum">05</span>경쟁사 비교 (3.3.3)</a></li><li><a href="#nooer"><span class="pnum">06</span>누어 교육자료</a></li><li><a href="#snc"><span class="pnum">07</span>슬립퍼 vs 누어</a></li><li><a href="#classify"><span class="pnum">08</span>슬립퍼 매트리스 분류표</a></li><li><a href="#radon"><span class="pnum">09</span>라돈 안전성</a></li><li><a href="#pillow"><span class="pnum">10</span>경추베개</a></li><li><a href="#hardy"><span class="pnum">11</span>하디 침대</a></li></ul>
       </aside>
       <main class="main">
-        
-      <section class="part-section" id="lineup">
-        <div class="part-head">
-          <span class="pnum">Part 01</span>
-          <h2>신규 라인업 3.3.3</h2>
-          <span class="range">4 docs</span>
-        </div>
-        <p class="part-sub">2025-12 출시 4종 라인업 — 시그니처 · 하이브리드 · 스테이블 · 밸런스드</p>
-        <div class="doc-grid">
-        <article class="doc-card reveal" data-cat="lineup">
-          <div class="thumb-wrap">
-            <img class="thumb" src="assets/session3/thumbs/signature.jpg" alt="시그니처 매트리스 라인업 미리보기" loading="lazy" />
-            <span class="ext-badge">PDF</span>
-          </div>
-          <div class="body">
-            <h3>시그니처 매트리스 라인업</h3>
-            <p class="desc">단단함과 안정감의 시그니처 3종 — 라인업 교육자료</p>
-            <div class="meta-row">
-              <span class="meta-i">4.1 MB</span>
-              <span class="meta-i">20p</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="assets/download/session3/01_signature_lineup_251216.pdf" target="_blank" rel="noopener"><span>Preview</span><span class="arr">↗</span></a>
-              <a class="btn btn-primary" href="assets/download/session3/01_signature_lineup_251216.pdf" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-
-        <article class="doc-card reveal" data-cat="lineup">
-          <div class="thumb-wrap">
-            <img class="thumb" src="assets/session3/thumbs/hybrid.jpg" alt="하이브리드 매트리스 라인업 미리보기" loading="lazy" />
-            <span class="ext-badge">PDF</span>
-          </div>
-          <div class="body">
-            <h3>하이브리드 매트리스 라인업</h3>
-            <p class="desc">포켓스프링 + 메모리폼 — 하이브리드 라인업 교육자료</p>
-            <div class="meta-row">
-              <span class="meta-i">2.1 MB</span>
-              <span class="meta-i">11p</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="assets/download/session3/02_hybrid_lineup_251216.pdf" target="_blank" rel="noopener"><span>Preview</span><span class="arr">↗</span></a>
-              <a class="btn btn-primary" href="assets/download/session3/02_hybrid_lineup_251216.pdf" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-
-        <article class="doc-card reveal" data-cat="lineup">
-          <div class="thumb-wrap">
-            <img class="thumb" src="assets/session3/thumbs/stable.jpg" alt="스테이블 매트리스 라인업 미리보기" loading="lazy" />
-            <span class="ext-badge">PDF</span>
-          </div>
-          <div class="body">
-            <h3>스테이블 매트리스 라인업</h3>
-            <p class="desc">안정적 지지력의 스테이블 라인 — 라인업 교육자료</p>
-            <div class="meta-row">
-              <span class="meta-i">2.2 MB</span>
-              <span class="meta-i">11p</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="assets/download/session3/03_stable_lineup_251216.pdf" target="_blank" rel="noopener"><span>Preview</span><span class="arr">↗</span></a>
-              <a class="btn btn-primary" href="assets/download/session3/03_stable_lineup_251216.pdf" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-
-        <article class="doc-card reveal" data-cat="lineup">
-          <div class="thumb-wrap">
-            <img class="thumb" src="assets/session3/thumbs/balanced.jpg" alt="밸런스드 매트리스 라인업 미리보기" loading="lazy" />
-            <span class="ext-badge">PDF</span>
-          </div>
-          <div class="body">
-            <h3>밸런스드 매트리스 라인업</h3>
-            <p class="desc">균형감 있는 밸런스드 라인 — 라인업 교육자료</p>
-            <div class="meta-row">
-              <span class="meta-i">2.3 MB</span>
-              <span class="meta-i">11p</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="assets/download/session3/04_balanced_lineup_251216.pdf" target="_blank" rel="noopener"><span>Preview</span><span class="arr">↗</span></a>
-              <a class="btn btn-primary" href="assets/download/session3/04_balanced_lineup_251216.pdf" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-        </div>
-      </section>
-
-
-      <section class="part-section" id="compare">
-        <div class="part-head">
-          <span class="pnum">Part 02</span>
-          <h2>경쟁사 비교 자료</h2>
-          <span class="range">1 doc</span>
-        </div>
-        <p class="part-sub">라인업·스펙·가격 — 타사 대비 포지셔닝 응대 자료</p>
-        <div class="doc-grid">
-        <article class="doc-card reveal" data-cat="compare">
-          <div class="thumb-wrap">
-            <img class="thumb" src="assets/session3/thumbs/compete.jpg" alt="슬립퍼 매트리스 3.3.3. 경쟁사 비교 미리보기" loading="lazy" />
-            <span class="ext-badge">PDF</span>
-          </div>
-          <div class="body">
-            <h3>슬립퍼 매트리스 3.3.3. 경쟁사 비교</h3>
-            <p class="desc">타사 라인업과의 스펙·가격·구성 비교 (2025-12-12)</p>
-            <div class="meta-row">
-              <span class="meta-i">1.4 MB</span>
-              <span class="meta-i">6p</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="assets/download/session3/05_competitor_compare_251212.pdf" target="_blank" rel="noopener"><span>Preview</span><span class="arr">↗</span></a>
-              <a class="btn btn-primary" href="assets/download/session3/05_competitor_compare_251212.pdf" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-        </div>
-      </section>
-
-
-      <section class="part-section" id="brand">
-        <div class="part-head">
-          <span class="pnum">Part 03</span>
-          <h2>브랜드 · 분류 자료</h2>
-          <span class="range">3 docs</span>
-        </div>
-        <p class="part-sub">누어·슬립퍼 두 브랜드의 라인업·소재·포지셔닝 차이</p>
-        <div class="doc-grid">
-        <article class="doc-card reveal" data-cat="brand">
-          <div class="thumb-wrap">
-            <img class="thumb" src="assets/session3/thumbs/nooer.jpg" alt="누어 교육자료 — 포근히, 탄탄히 미리보기" loading="lazy" />
-            <span class="ext-badge">PDF</span>
-          </div>
-          <div class="body">
-            <h3>누어 교육자료 — 포근히, 탄탄히</h3>
-            <p class="desc">누어 라인의 브랜드 스토리·라인업·소재 (2024-09-23)</p>
-            <div class="meta-row">
-              <span class="meta-i">262 KB</span>
-              <span class="meta-i">1p</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="assets/download/session3/06_nooer_education_240923_lite.pdf" target="_blank" rel="noopener"><span>Preview</span><span class="arr">↗</span></a>
-              <a class="btn btn-primary" href="assets/download/session3/06_nooer_education_240923_lite.pdf" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-
-        <article class="doc-card reveal" data-cat="brand">
-          <div class="thumb-wrap">
-            <img class="thumb" src="assets/session3/thumbs/snc.jpg" alt="슬립퍼 & 누어 매트리스 비교 미리보기" loading="lazy" />
-            <span class="ext-badge">PDF</span>
-          </div>
-          <div class="body">
-            <h3>슬립퍼 & 누어 매트리스 비교</h3>
-            <p class="desc">두 브랜드의 포지셔닝·소재·라인업 차이 (2024-02-20)</p>
-            <div class="meta-row">
-              <span class="meta-i">354 KB</span>
-              <span class="meta-i">1p</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="assets/download/session3/07_sleeper_nooer_compare_240220_lite.pdf" target="_blank" rel="noopener"><span>Preview</span><span class="arr">↗</span></a>
-              <a class="btn btn-primary" href="assets/download/session3/07_sleeper_nooer_compare_240220_lite.pdf" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-
-        <article class="doc-card reveal" data-cat="brand">
-          <div class="thumb-wrap">
-            <img class="thumb" src="assets/session3/thumbs/classify.jpg" alt="슬립퍼 매트리스 분류표 미리보기" loading="lazy" />
-            <span class="ext-badge">PDF</span>
-          </div>
-          <div class="body">
-            <h3>슬립퍼 매트리스 분류표</h3>
-            <p class="desc">전 라인업 분류·스펙 한장 정리 (2024-05-13)</p>
-            <div class="meta-row">
-              <span class="meta-i">564 KB</span>
-              <span class="meta-i">7p</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="assets/download/session3/09_mattress_classification_240513_lite.pdf" target="_blank" rel="noopener"><span>Preview</span><span class="arr">↗</span></a>
-              <a class="btn btn-primary" href="assets/download/session3/09_mattress_classification_240513_lite.pdf" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-        </div>
-      </section>
-
-
-      <section class="part-section" id="safety">
-        <div class="part-head">
-          <span class="pnum">Part 04</span>
-          <h2>안전성</h2>
-          <span class="range">1 doc</span>
-        </div>
-        <p class="part-sub">라돈·인증 — 매장 응대에서 가장 자주 받는 질문</p>
-        <div class="doc-grid">
-        <article class="doc-card reveal" data-cat="safety">
-          <div class="thumb-wrap">
-            <img class="thumb" src="assets/session3/thumbs/radon.jpg" alt="슬립퍼 매트리스 라돈 안전성 미리보기" loading="lazy" />
-            <span class="ext-badge">PDF</span>
-          </div>
-          <div class="body">
-            <h3>슬립퍼 매트리스 라돈 안전성</h3>
-            <p class="desc">라돈 검사 데이터·인증 — 안전성 응대 자료 (2024-02-20)</p>
-            <div class="meta-row">
-              <span class="meta-i">215 KB</span>
-              <span class="meta-i">1p</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="assets/download/session3/08_radon_safety_240220_lite.pdf" target="_blank" rel="noopener"><span>Preview</span><span class="arr">↗</span></a>
-              <a class="btn btn-primary" href="assets/download/session3/08_radon_safety_240220_lite.pdf" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-        </div>
-      </section>
-
-
-      <section class="part-section" id="pillow">
-        <div class="part-head">
-          <span class="pnum">Part 05</span>
-          <h2>베개</h2>
-          <span class="range">1 doc</span>
-        </div>
-        <p class="part-sub">경추베개 응대 자료</p>
-        <div class="doc-grid">
-        <article class="doc-card reveal" data-cat="pillow">
-          <div class="thumb-wrap">
-            <img class="thumb" src="assets/session3/thumbs/cervical.jpg" alt="경추베개 팜플렛 미리보기" loading="lazy" />
-            <span class="ext-badge">PDF</span>
-          </div>
-          <div class="body">
-            <h3>경추베개 팜플렛</h3>
-            <p class="desc">경추베개 라인 — 매장 응대용 팜플렛 (2024-02-14)</p>
-            <div class="meta-row">
-              <span class="meta-i">1.5 MB</span>
-              <span class="meta-i">1p</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="assets/download/session3/10_cervical_pillow_240214.pdf" target="_blank" rel="noopener"><span>Preview</span><span class="arr">↗</span></a>
-              <a class="btn btn-primary" href="assets/download/session3/10_cervical_pillow_240214.pdf" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-        </div>
-      </section>
-
-
-      <section class="part-section" id="bed">
-        <div class="part-head">
-          <span class="pnum">Part 06</span>
-          <h2>침대 프레임</h2>
-          <span class="range">1 doc</span>
-        </div>
-        <p class="part-sub">하디 침대 — 구조·소재·구성</p>
-        <div class="doc-grid">
-        <article class="doc-card reveal" data-cat="bed">
-          <div class="thumb-wrap">
-            <div class="thumb thumb-fallback"><span class="ext">PPTX</span></div>
-            <span class="ext-badge">PPTX</span>
-          </div>
-          <div class="body">
-            <h3>하디 침대 교육용 자료</h3>
-            <p class="desc">하디 프레임 — 구조·소재·구성 교육 슬라이드 (PPTX)</p>
-            <div class="meta-row">
-              <span class="meta-i">9.4 MB</span>
-              
-            </div>
-            <div class="actions">
-              
-              <a class="btn btn-primary" href="assets/download/session3/11_hardy_bed_education.pptx" download><span>Download</span><span class="arr">↓</span></a>
-            </div>
-          </div>
-        </article>
-
-        </div>
-      </section>
-
+        <section class="part-section reveal" id="cover"><div class="part-head"><h2>표지</h2><div class="range">01 — 01</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_001.png" data-full="assets/session3/slide_001.png" alt="slide 1" /><span class="num-badge">01</span></div><div class="meta"><b>SESSION 03 · COVER</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="signature"><div class="part-head"><span class='pnum'>Part 01</span><h2>시그니처 매트리스</h2><div class="range">02 — 21</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_002.png" data-full="assets/session3/slide_002.png" alt="slide 2" /><span class="num-badge">02</span></div><div class="meta"><b>SIGNATURE · 표지</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_003.png" data-full="assets/session3/slide_003.png" alt="slide 3" /><span class="num-badge">03</span></div><div class="meta"><b>라인업 소개</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_004.png" data-full="assets/session3/slide_004.png" alt="slide 4" /><span class="num-badge">04</span></div><div class="meta"><b>포지셔닝</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_005.png" data-full="assets/session3/slide_005.png" alt="slide 5" /><span class="num-badge">05</span></div><div class="meta"><b>시그니처 1 (포근)</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_006.png" data-full="assets/session3/slide_006.png" alt="slide 6" /><span class="num-badge">06</span></div><div class="meta"><b>시그니처 1 · 디테일</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_007.png" data-full="assets/session3/slide_007.png" alt="slide 7" /><span class="num-badge">07</span></div><div class="meta"><b>시그니처 1 · 구성</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_008.png" data-full="assets/session3/slide_008.png" alt="slide 8" /><span class="num-badge">08</span></div><div class="meta"><b>시그니처 2 (균형)</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_009.png" data-full="assets/session3/slide_009.png" alt="slide 9" /><span class="num-badge">09</span></div><div class="meta"><b>시그니처 2 · 디테일</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_010.png" data-full="assets/session3/slide_010.png" alt="slide 10" /><span class="num-badge">10</span></div><div class="meta"><b>시그니처 2 · 구성</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_011.png" data-full="assets/session3/slide_011.png" alt="slide 11" /><span class="num-badge">11</span></div><div class="meta"><b>시그니처 3 (탄탄)</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_012.png" data-full="assets/session3/slide_012.png" alt="slide 12" /><span class="num-badge">12</span></div><div class="meta"><b>시그니처 3 · 디테일</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_013.png" data-full="assets/session3/slide_013.png" alt="slide 13" /><span class="num-badge">13</span></div><div class="meta"><b>시그니처 3 · 구성</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_014.png" data-full="assets/session3/slide_014.png" alt="slide 14" /><span class="num-badge">14</span></div><div class="meta"><b>3종 비교 1</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_015.png" data-full="assets/session3/slide_015.png" alt="slide 15" /><span class="num-badge">15</span></div><div class="meta"><b>3종 비교 2</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_016.png" data-full="assets/session3/slide_016.png" alt="slide 16" /><span class="num-badge">16</span></div><div class="meta"><b>프레임 호환</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_017.png" data-full="assets/session3/slide_017.png" alt="slide 17" /><span class="num-badge">17</span></div><div class="meta"><b>사이즈·가격</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_018.png" data-full="assets/session3/slide_018.png" alt="slide 18" /><span class="num-badge">18</span></div><div class="meta"><b>케어</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_019.png" data-full="assets/session3/slide_019.png" alt="slide 19" /><span class="num-badge">19</span></div><div class="meta"><b>FAQ</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_020.png" data-full="assets/session3/slide_020.png" alt="slide 20" /><span class="num-badge">20</span></div><div class="meta"><b>체험 가이드</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_021.png" data-full="assets/session3/slide_021.png" alt="slide 21" /><span class="num-badge">21</span></div><div class="meta"><b>CLOSING</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="hybrid"><div class="part-head"><span class='pnum'>Part 02</span><h2>하이브리드 매트리스</h2><div class="range">22 — 32</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_022.png" data-full="assets/session3/slide_022.png" alt="slide 22" /><span class="num-badge">22</span></div><div class="meta"><b>HYBRID · 표지</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_023.png" data-full="assets/session3/slide_023.png" alt="slide 23" /><span class="num-badge">23</span></div><div class="meta"><b>라인업 소개</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_024.png" data-full="assets/session3/slide_024.png" alt="slide 24" /><span class="num-badge">24</span></div><div class="meta"><b>포지셔닝</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_025.png" data-full="assets/session3/slide_025.png" alt="slide 25" /><span class="num-badge">25</span></div><div class="meta"><b>구조 (포켓+메모리폼)</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_026.png" data-full="assets/session3/slide_026.png" alt="slide 26" /><span class="num-badge">26</span></div><div class="meta"><b>소재</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_027.png" data-full="assets/session3/slide_027.png" alt="slide 27" /><span class="num-badge">27</span></div><div class="meta"><b>라인업</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_028.png" data-full="assets/session3/slide_028.png" alt="slide 28" /><span class="num-badge">28</span></div><div class="meta"><b>사이즈·가격</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_029.png" data-full="assets/session3/slide_029.png" alt="slide 29" /><span class="num-badge">29</span></div><div class="meta"><b>케어</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_030.png" data-full="assets/session3/slide_030.png" alt="slide 30" /><span class="num-badge">30</span></div><div class="meta"><b>FAQ</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_031.png" data-full="assets/session3/slide_031.png" alt="slide 31" /><span class="num-badge">31</span></div><div class="meta"><b>체험 가이드</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_032.png" data-full="assets/session3/slide_032.png" alt="slide 32" /><span class="num-badge">32</span></div><div class="meta"><b>CLOSING</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="stable"><div class="part-head"><span class='pnum'>Part 03</span><h2>스테이블 매트리스</h2><div class="range">33 — 43</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_033.png" data-full="assets/session3/slide_033.png" alt="slide 33" /><span class="num-badge">33</span></div><div class="meta"><b>STABLE · 표지</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_034.png" data-full="assets/session3/slide_034.png" alt="slide 34" /><span class="num-badge">34</span></div><div class="meta"><b>라인업 소개</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_035.png" data-full="assets/session3/slide_035.png" alt="slide 35" /><span class="num-badge">35</span></div><div class="meta"><b>포지셔닝</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_036.png" data-full="assets/session3/slide_036.png" alt="slide 36" /><span class="num-badge">36</span></div><div class="meta"><b>구조 · 지지력</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_037.png" data-full="assets/session3/slide_037.png" alt="slide 37" /><span class="num-badge">37</span></div><div class="meta"><b>소재</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_038.png" data-full="assets/session3/slide_038.png" alt="slide 38" /><span class="num-badge">38</span></div><div class="meta"><b>라인업</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_039.png" data-full="assets/session3/slide_039.png" alt="slide 39" /><span class="num-badge">39</span></div><div class="meta"><b>사이즈·가격</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_040.png" data-full="assets/session3/slide_040.png" alt="slide 40" /><span class="num-badge">40</span></div><div class="meta"><b>케어</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_041.png" data-full="assets/session3/slide_041.png" alt="slide 41" /><span class="num-badge">41</span></div><div class="meta"><b>FAQ</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_042.png" data-full="assets/session3/slide_042.png" alt="slide 42" /><span class="num-badge">42</span></div><div class="meta"><b>체험 가이드</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_043.png" data-full="assets/session3/slide_043.png" alt="slide 43" /><span class="num-badge">43</span></div><div class="meta"><b>CLOSING</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="balanced"><div class="part-head"><span class='pnum'>Part 04</span><h2>밸런스드 매트리스</h2><div class="range">44 — 54</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_044.png" data-full="assets/session3/slide_044.png" alt="slide 44" /><span class="num-badge">44</span></div><div class="meta"><b>BALANCED · 표지</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_045.png" data-full="assets/session3/slide_045.png" alt="slide 45" /><span class="num-badge">45</span></div><div class="meta"><b>라인업 소개</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_046.png" data-full="assets/session3/slide_046.png" alt="slide 46" /><span class="num-badge">46</span></div><div class="meta"><b>포지셔닝</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_047.png" data-full="assets/session3/slide_047.png" alt="slide 47" /><span class="num-badge">47</span></div><div class="meta"><b>구조 · 균형감</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_048.png" data-full="assets/session3/slide_048.png" alt="slide 48" /><span class="num-badge">48</span></div><div class="meta"><b>소재</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_049.png" data-full="assets/session3/slide_049.png" alt="slide 49" /><span class="num-badge">49</span></div><div class="meta"><b>라인업</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_050.png" data-full="assets/session3/slide_050.png" alt="slide 50" /><span class="num-badge">50</span></div><div class="meta"><b>사이즈·가격</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_051.png" data-full="assets/session3/slide_051.png" alt="slide 51" /><span class="num-badge">51</span></div><div class="meta"><b>케어</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_052.png" data-full="assets/session3/slide_052.png" alt="slide 52" /><span class="num-badge">52</span></div><div class="meta"><b>FAQ</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_053.png" data-full="assets/session3/slide_053.png" alt="slide 53" /><span class="num-badge">53</span></div><div class="meta"><b>체험 가이드</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_054.png" data-full="assets/session3/slide_054.png" alt="slide 54" /><span class="num-badge">54</span></div><div class="meta"><b>CLOSING</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="compete"><div class="part-head"><span class='pnum'>Part 05</span><h2>경쟁사 비교 (3.3.3)</h2><div class="range">55 — 60</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_055.png" data-full="assets/session3/slide_055.png" alt="slide 55" /><span class="num-badge">55</span></div><div class="meta"><b>경쟁사 비교 · 표지</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_056.png" data-full="assets/session3/slide_056.png" alt="slide 56" /><span class="num-badge">56</span></div><div class="meta"><b>12종 시리즈 특장 + 경도</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_057.png" data-full="assets/session3/slide_057.png" alt="slide 57" /><span class="num-badge">57</span></div><div class="meta"><b>시그니처 vs 시몬스 · 씰리</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_058.png" data-full="assets/session3/slide_058.png" alt="slide 58" /><span class="num-badge">58</span></div><div class="meta"><b>하이브리드 vs 코웨이 · 씰리 · 베스트슬립</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_059.png" data-full="assets/session3/slide_059.png" alt="slide 59" /><span class="num-badge">59</span></div><div class="meta"><b>스테이블 vs 씰리 · 코웨이 · 에이스 · 한셀 · 일룸</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_060.png" data-full="assets/session3/slide_060.png" alt="slide 60" /><span class="num-badge">60</span></div><div class="meta"><b>밸런스드 vs 에이스 · 코웨이 · 일룸</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="nooer"><div class="part-head"><span class='pnum'>Part 06</span><h2>누어 교육자료</h2><div class="range">61 — 61</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_061.png" data-full="assets/session3/slide_061.png" alt="slide 61" /><span class="num-badge">61</span></div><div class="meta"><b>NOOER · 포근히, 탄탄히 — 브랜드 1장</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="snc"><div class="part-head"><span class='pnum'>Part 07</span><h2>슬립퍼 vs 누어</h2><div class="range">62 — 62</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_062.png" data-full="assets/session3/slide_062.png" alt="slide 62" /><span class="num-badge">62</span></div><div class="meta"><b>SLEEPER & NOOER 비교 — 브랜드 포지셔닝</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="classify"><div class="part-head"><span class='pnum'>Part 08</span><h2>슬립퍼 매트리스 분류표</h2><div class="range">63 — 69</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_063.png" data-full="assets/session3/slide_063.png" alt="slide 63" /><span class="num-badge">63</span></div><div class="meta"><b>분류표 · 표지</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_064.png" data-full="assets/session3/slide_064.png" alt="slide 64" /><span class="num-badge">64</span></div><div class="meta"><b>포지션 매트릭스 (포근 ~ 탄탄)</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_065.png" data-full="assets/session3/slide_065.png" alt="slide 65" /><span class="num-badge">65</span></div><div class="meta"><b>라인업 한눈에</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_066.png" data-full="assets/session3/slide_066.png" alt="slide 66" /><span class="num-badge">66</span></div><div class="meta"><b>소재 분류</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_067.png" data-full="assets/session3/slide_067.png" alt="slide 67" /><span class="num-badge">67</span></div><div class="meta"><b>사이즈·가격 분류</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_068.png" data-full="assets/session3/slide_068.png" alt="slide 68" /><span class="num-badge">68</span></div><div class="meta"><b>가격대별</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_069.png" data-full="assets/session3/slide_069.png" alt="slide 69" /><span class="num-badge">69</span></div><div class="meta"><b>추천 가이드</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="radon"><div class="part-head"><span class='pnum'>Part 09</span><h2>라돈 안전성</h2><div class="range">70 — 70</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_070.png" data-full="assets/session3/slide_070.png" alt="slide 70" /><span class="num-badge">70</span></div><div class="meta"><b>라돈 검사 데이터 + 인증 1장</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="pillow"><div class="part-head"><span class='pnum'>Part 10</span><h2>경추베개</h2><div class="range">71 — 71</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_071.png" data-full="assets/session3/slide_071.png" alt="slide 71" /><span class="num-badge">71</span></div><div class="meta"><b>경추베개 라인업 — 매장 응대용 1장</b><span class="view">View</span></div></div></div></section><section class="part-section reveal" id="hardy"><div class="part-head"><span class='pnum'>Part 11</span><h2>하디 침대</h2><div class="range">72 — 81</div></div><div class="slide-grid"><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_072.png" data-full="assets/session3/slide_072.png" alt="slide 72" /><span class="num-badge">72</span></div><div class="meta"><b>HADI 하디</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_073.png" data-full="assets/session3/slide_073.png" alt="slide 73" /><span class="num-badge">73</span></div><div class="meta"><b>KEYWORD</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_074.png" data-full="assets/session3/slide_074.png" alt="slide 74" /><span class="num-badge">74</span></div><div class="meta"><b>헤드형</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_075.png" data-full="assets/session3/slide_075.png" alt="slide 75" /><span class="num-badge">75</span></div><div class="meta"><b>CLASSY WOOD</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_076.png" data-full="assets/session3/slide_076.png" alt="slide 76" /><span class="num-badge">76</span></div><div class="meta"><b>HPM (High Pressure Melamine)</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_077.png" data-full="assets/session3/slide_077.png" alt="slide 77" /><span class="num-badge">77</span></div><div class="meta"><b>- SE0 자재등급의 자작 합판에 HPM 고압 접착</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_078.png" data-full="assets/session3/slide_078.png" alt="slide 78" /><span class="num-badge">78</span></div><div class="meta"><b>합판의 옹이, 표면의 점 등은 합판과, HPM 소재 특성상</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_079.png" data-full="assets/session3/slide_079.png" alt="slide 79" /><span class="num-badge">79</span></div><div class="meta"><b>사이드 테이블</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_080.png" data-full="assets/session3/slide_080.png" alt="slide 80" /><span class="num-badge">80</span></div><div class="meta"><b>구성품</b><span class="view">View</span></div></div><div class="slide-card"><div class="thumb-wrap"><img class="thumb" loading="lazy" src="assets/session3/slide_081.png" data-full="assets/session3/slide_081.png" alt="slide 81" /><span class="num-badge">81</span></div><div class="meta"><b>구성 박스</b><span class="view">View</span></div></div></div></section>
       </main>
     </div>
   </div>
 
   <footer class="footer">
     <div class="container">
-      <div class="brand-mark">OGAREN <em>Manager Education</em> · Session 03</div>
-      <div>v2.2 · last updated 2026-05-22 · © DX팀</div>
+      <div class="brand-mark">OGAREN <em>Manager Education</em></div>
+      <div>v2.3 · 세션 3 · © DX팀</div>
     </div>
   </footer>
-
   <script>
 (function(){
+  const cards = Array.from(document.querySelectorAll('.slide-card'));
+  if (cards.length) {
+    const lb = document.createElement('div');
+    lb.className = 'lb';
+    lb.innerHTML = `
+      <button class="close" aria-label="닫기">×</button>
+      <button class="nav prev" aria-label="이전">‹</button>
+      <img alt="" />
+      <button class="nav next" aria-label="다음">›</button>
+      <div class="counter"><b></b> <span class="sep">/</span> <span class="total"></span></div>
+    `;
+    document.body.appendChild(lb);
+    const img = lb.querySelector('img');
+    const cur = lb.querySelector('.counter b');
+    const tot = lb.querySelector('.counter .total');
+    let idx = 0;
+    function show(i){
+      idx = (i + cards.length) % cards.length;
+      const im = cards[idx].querySelector('img');
+      const src = im.getAttribute('data-full') || im.src;
+      img.src = src;
+      cur.textContent = String(idx+1).padStart(2,'0');
+      tot.textContent = String(cards.length).padStart(2,'0');
+    }
+    function open(i){ show(i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function close(){ lb.classList.remove('open'); document.body.style.overflow = ''; img.src=''; }
+    cards.forEach((c, i) => c.addEventListener('click', () => open(i)));
+    lb.querySelector('.close').onclick = close;
+    lb.querySelector('.prev').onclick = (e) => { e.stopPropagation(); show(idx-1); };
+    lb.querySelector('.next').onclick = (e) => { e.stopPropagation(); show(idx+1); };
+    lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+    document.addEventListener('keydown', (e) => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(idx-1);
+      if (e.key === 'ArrowRight') show(idx+1);
+    });
+  }
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
   }, { rootMargin: '-40px' });

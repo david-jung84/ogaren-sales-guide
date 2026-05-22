@@ -1,0 +1,425 @@
+{
+  "total": 81,
+  "toc": [
+    {
+      "id": "cover",
+      "label": "표지",
+      "from": 1,
+      "to": 1,
+      "slides": [
+        {
+          "num": 1,
+          "title": "SESSION 03 · COVER"
+        }
+      ]
+    },
+    {
+      "id": "signature",
+      "label": "Part 01 · 시그니처 매트리스",
+      "from": 2,
+      "to": 21,
+      "slides": [
+        {
+          "num": 2,
+          "title": "SIGNATURE · 표지"
+        },
+        {
+          "num": 3,
+          "title": "라인업 소개"
+        },
+        {
+          "num": 4,
+          "title": "포지셔닝"
+        },
+        {
+          "num": 5,
+          "title": "시그니처 1 (포근)"
+        },
+        {
+          "num": 6,
+          "title": "시그니처 1 · 디테일"
+        },
+        {
+          "num": 7,
+          "title": "시그니처 1 · 구성"
+        },
+        {
+          "num": 8,
+          "title": "시그니처 2 (균형)"
+        },
+        {
+          "num": 9,
+          "title": "시그니처 2 · 디테일"
+        },
+        {
+          "num": 10,
+          "title": "시그니처 2 · 구성"
+        },
+        {
+          "num": 11,
+          "title": "시그니처 3 (탄탄)"
+        },
+        {
+          "num": 12,
+          "title": "시그니처 3 · 디테일"
+        },
+        {
+          "num": 13,
+          "title": "시그니처 3 · 구성"
+        },
+        {
+          "num": 14,
+          "title": "3종 비교 1"
+        },
+        {
+          "num": 15,
+          "title": "3종 비교 2"
+        },
+        {
+          "num": 16,
+          "title": "프레임 호환"
+        },
+        {
+          "num": 17,
+          "title": "사이즈·가격"
+        },
+        {
+          "num": 18,
+          "title": "케어"
+        },
+        {
+          "num": 19,
+          "title": "FAQ"
+        },
+        {
+          "num": 20,
+          "title": "체험 가이드"
+        },
+        {
+          "num": 21,
+          "title": "CLOSING"
+        }
+      ]
+    },
+    {
+      "id": "hybrid",
+      "label": "Part 02 · 하이브리드 매트리스",
+      "from": 22,
+      "to": 32,
+      "slides": [
+        {
+          "num": 22,
+          "title": "HYBRID · 표지"
+        },
+        {
+          "num": 23,
+          "title": "라인업 소개"
+        },
+        {
+          "num": 24,
+          "title": "포지셔닝"
+        },
+        {
+          "num": 25,
+          "title": "구조 (포켓+메모리폼)"
+        },
+        {
+          "num": 26,
+          "title": "소재"
+        },
+        {
+          "num": 27,
+          "title": "라인업"
+        },
+        {
+          "num": 28,
+          "title": "사이즈·가격"
+        },
+        {
+          "num": 29,
+          "title": "케어"
+        },
+        {
+          "num": 30,
+          "title": "FAQ"
+        },
+        {
+          "num": 31,
+          "title": "체험 가이드"
+        },
+        {
+          "num": 32,
+          "title": "CLOSING"
+        }
+      ]
+    },
+    {
+      "id": "stable",
+      "label": "Part 03 · 스테이블 매트리스",
+      "from": 33,
+      "to": 43,
+      "slides": [
+        {
+          "num": 33,
+          "title": "STABLE · 표지"
+        },
+        {
+          "num": 34,
+          "title": "라인업 소개"
+        },
+        {
+          "num": 35,
+          "title": "포지셔닝"
+        },
+        {
+          "num": 36,
+          "title": "구조 · 지지력"
+        },
+        {
+          "num": 37,
+          "title": "소재"
+        },
+        {
+          "num": 38,
+          "title": "라인업"
+        },
+        {
+          "num": 39,
+          "title": "사이즈·가격"
+        },
+        {
+          "num": 40,
+          "title": "케어"
+        },
+        {
+          "num": 41,
+          "title": "FAQ"
+        },
+        {
+          "num": 42,
+          "title": "체험 가이드"
+        },
+        {
+          "num": 43,
+          "title": "CLOSING"
+        }
+      ]
+    },
+    {
+      "id": "balanced",
+      "label": "Part 04 · 밸런스드 매트리스",
+      "from": 44,
+      "to": 54,
+      "slides": [
+        {
+          "num": 44,
+          "title": "BALANCED · 표지"
+        },
+        {
+          "num": 45,
+          "title": "라인업 소개"
+        },
+        {
+          "num": 46,
+          "title": "포지셔닝"
+        },
+        {
+          "num": 47,
+          "title": "구조 · 균형감"
+        },
+        {
+          "num": 48,
+          "title": "소재"
+        },
+        {
+          "num": 49,
+          "title": "라인업"
+        },
+        {
+          "num": 50,
+          "title": "사이즈·가격"
+        },
+        {
+          "num": 51,
+          "title": "케어"
+        },
+        {
+          "num": 52,
+          "title": "FAQ"
+        },
+        {
+          "num": 53,
+          "title": "체험 가이드"
+        },
+        {
+          "num": 54,
+          "title": "CLOSING"
+        }
+      ]
+    },
+    {
+      "id": "compete",
+      "label": "Part 05 · 경쟁사 비교 (3.3.3)",
+      "from": 55,
+      "to": 60,
+      "slides": [
+        {
+          "num": 55,
+          "title": "경쟁사 비교 · 표지"
+        },
+        {
+          "num": 56,
+          "title": "12종 시리즈 특장 + 경도"
+        },
+        {
+          "num": 57,
+          "title": "시그니처 vs 시몬스 · 씰리"
+        },
+        {
+          "num": 58,
+          "title": "하이브리드 vs 코웨이 · 씰리 · 베스트슬립"
+        },
+        {
+          "num": 59,
+          "title": "스테이블 vs 씰리 · 코웨이 · 에이스 · 한셀 · 일룸"
+        },
+        {
+          "num": 60,
+          "title": "밸런스드 vs 에이스 · 코웨이 · 일룸"
+        }
+      ]
+    },
+    {
+      "id": "nooer",
+      "label": "Part 06 · 누어 교육자료",
+      "from": 61,
+      "to": 61,
+      "slides": [
+        {
+          "num": 61,
+          "title": "NOOER · 포근히, 탄탄히 — 브랜드 1장"
+        }
+      ]
+    },
+    {
+      "id": "snc",
+      "label": "Part 07 · 슬립퍼 vs 누어",
+      "from": 62,
+      "to": 62,
+      "slides": [
+        {
+          "num": 62,
+          "title": "SLEEPER & NOOER 비교 — 브랜드 포지셔닝"
+        }
+      ]
+    },
+    {
+      "id": "classify",
+      "label": "Part 08 · 슬립퍼 매트리스 분류표",
+      "from": 63,
+      "to": 69,
+      "slides": [
+        {
+          "num": 63,
+          "title": "분류표 · 표지"
+        },
+        {
+          "num": 64,
+          "title": "포지션 매트릭스 (포근 ~ 탄탄)"
+        },
+        {
+          "num": 65,
+          "title": "라인업 한눈에"
+        },
+        {
+          "num": 66,
+          "title": "소재 분류"
+        },
+        {
+          "num": 67,
+          "title": "사이즈·가격 분류"
+        },
+        {
+          "num": 68,
+          "title": "가격대별"
+        },
+        {
+          "num": 69,
+          "title": "추천 가이드"
+        }
+      ]
+    },
+    {
+      "id": "radon",
+      "label": "Part 09 · 라돈 안전성",
+      "from": 70,
+      "to": 70,
+      "slides": [
+        {
+          "num": 70,
+          "title": "라돈 검사 데이터 + 인증 1장"
+        }
+      ]
+    },
+    {
+      "id": "pillow",
+      "label": "Part 10 · 경추베개",
+      "from": 71,
+      "to": 71,
+      "slides": [
+        {
+          "num": 71,
+          "title": "경추베개 라인업 — 매장 응대용 1장"
+        }
+      ]
+    },
+    {
+      "id": "hardy",
+      "label": "Part 11 · 하디 침대",
+      "from": 72,
+      "to": 81,
+      "slides": [
+        {
+          "num": 72,
+          "title": "HADI 하디"
+        },
+        {
+          "num": 73,
+          "title": "KEYWORD"
+        },
+        {
+          "num": 74,
+          "title": "헤드형"
+        },
+        {
+          "num": 75,
+          "title": "CLASSY WOOD"
+        },
+        {
+          "num": 76,
+          "title": "HPM (High Pressure Melamine)"
+        },
+        {
+          "num": 77,
+          "title": "- SE0 자재등급의 자작 합판에 HPM 고압 접착"
+        },
+        {
+          "num": 78,
+          "title": "합판의 옹이, 표면의 점 등은 합판과, HPM 소재 특성상"
+        },
+        {
+          "num": 79,
+          "title": "사이드 테이블"
+        },
+        {
+          "num": 80,
+          "title": "구성품"
+        },
+        {
+          "num": 81,
+          "title": "구성 박스"
+        }
+      ]
+    }
+  ]
+}

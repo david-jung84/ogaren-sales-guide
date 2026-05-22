@@ -24,8 +24,9 @@ const SLIDE_MARKERS = {
   PART7_START: 2193,      // SLIDE 48 디바이더
   PART8_START: 2405,      // SLIDE 53 디바이더
   PART9_START: 3108,      // SLIDE 66 디바이더 (+1 from slide 54 rowH 추가)
-  APPENDIX_START: 3365,   // 경쟁사 비교 어펜딕스 (세션 2 전용)
-  FINAL_START: 3395,      // SLIDE 70 (마무리)
+  APPENDIX_S1_START: 3365, // 제품 라인업 어펜딕스 (세션 1 전용)
+  APPENDIX_S2_START: 3392, // 경쟁사 비교 어펜딕스 (세션 2 전용)
+  FINAL_START: 3422,       // SLIDE 70 (마무리)
   EOF: -1,
 };
 
@@ -67,8 +68,9 @@ const S2_PART5 = get(SLIDE_MARKERS.PART5_START, SLIDE_MARKERS.PART6_START);
 const S2_PART6_HEAD = get(PART6_INTERNAL.DIVIDER, PART6_INTERNAL.CASE_1);  // 디바이더 + 7가지 행동
 const S2_PART6_TAIL = get(PART6_INTERNAL.BEST_LINES, PART6_INTERNAL.PART6_END);  // 베스트 멘트 + 체크리스트
 const S2_PART7 = get(SLIDE_MARKERS.PART7_START, SLIDE_MARKERS.PART8_START);
-const S2_PART9 = get(SLIDE_MARKERS.PART9_START, SLIDE_MARKERS.APPENDIX_START);
-const APPENDIX = get(SLIDE_MARKERS.APPENDIX_START, SLIDE_MARKERS.FINAL_START);
+const S2_PART9 = get(SLIDE_MARKERS.PART9_START, SLIDE_MARKERS.APPENDIX_S1_START);
+const APPENDIX_S1 = get(SLIDE_MARKERS.APPENDIX_S1_START, SLIDE_MARKERS.APPENDIX_S2_START);
+const APPENDIX_S2 = get(SLIDE_MARKERS.APPENDIX_S2_START, SLIDE_MARKERS.FINAL_START);
 
 // --- 마무리 슬라이드 (writeFile 라인은 제외하고, addSlide 부분만) ---
 const FINAL_BLOCK_FULL = lines.slice(SLIDE_MARKERS.FINAL_START - 1).join("\n");
@@ -117,6 +119,7 @@ function patchToc(code, isSession1) {
     ["Part 2", "매트리스 마스터하기", "12"],
     ["Part 3", "침대 프레임 마스터하기", "20"],
     ["Part 4", "인증 & 안전성", "25"],
+    ["부록", "제품 라인업 가격표 (영업 기밀)", "38"],
   ];`;
     code = code.replace(
       /const toc = \[[\s\S]*?\];/,
@@ -129,7 +132,7 @@ function patchToc(code, isSession1) {
     ["Part 3", "TOP 매니저 케이스 (실명)", "20"],
     ["Part 4", "운영 · KPI · 부록", "29"],
     ["Part 5", "배송 실무", "34"],
-    ["부록", "경쟁사 비교 자료 (영업 기밀)", "38"],
+    // ["부록", "경쟁사 비교 자료"] → 세션 3 (쇼룸·백화점 교육자료) 로 이전 (2026-05-22)
   ];`;
     code = code.replace(
       /const toc = \[[\s\S]*?\];/,
@@ -180,6 +183,7 @@ let session1 = HEADER
   + S1_PART2
   + S1_PART3
   + S1_PART8
+  + APPENDIX_S1
   + FINAL_BLOCK;
 session1 = renumberDividers(session1, S1_MAPPING);
 session1 = renumberFooterLabels(session1, S1_MAPPING);
@@ -217,7 +221,7 @@ let session2 = HEADER
   + S2_PART6_TAIL
   + S2_PART7
   + S2_PART9
-  + APPENDIX
+  + APPENDIX_S2
   + FINAL_BLOCK;
 session2 = renumberDividers(session2, S2_MAPPING);
 session2 = renumberFooterLabels(session2, S2_MAPPING);
