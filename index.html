@@ -60,14 +60,15 @@ img { display: block; }
 .section-label .num { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); }
 .section-label .sub { font-size: 14px; color: var(--text-2); max-width: 360px; font-weight: 300; }
 
-.session-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-@media (max-width: 860px) { .session-grid { grid-template-columns: 1fr; } }
+.session-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 1080px) { .session-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 720px) { .session-grid { grid-template-columns: 1fr; } }
 
 .session-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 4px;
-  padding: 48px 40px;
+  padding: 40px 32px;
   position: relative;
   overflow: hidden;
   transition: border-color .35s ease, transform .35s ease, background .35s ease;
@@ -83,7 +84,7 @@ img { display: block; }
 .session-card:hover::before { opacity: 1; }
 .session-card .num { font-family: var(--serif); font-size: 14px; letter-spacing: 4px; color: var(--accent-warm); text-transform: uppercase; }
 .session-card .num em { font-style: normal; }
-.session-card h3 { font-family: var(--serif); font-size: 44px; font-weight: 500; line-height: 1.1; margin: 14px 0 18px; letter-spacing: -0.5px; }
+.session-card h3 { font-family: var(--serif); font-size: 38px; font-weight: 500; line-height: 1.1; margin: 14px 0 18px; letter-spacing: -0.5px; }
 .session-card h3 em { font-style: normal; color: var(--accent); font-weight: 400; }
 .session-card .desc { font-size: 13px; color: var(--text-3); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 28px; }
 .session-card .parts { list-style: none; margin-top: 24px; border-top: 1px solid var(--border); padding-top: 24px; }
@@ -175,7 +176,7 @@ img { display: block; }
   <nav class="nav">
     <div class="container">
       <div class="brand">OGAREN</div>
-      <div class="edition">Edition v2.1 · 2026-05-22</div>
+      <div class="edition">Edition v2.2 · 2026-05-22</div>
     </div>
   </nav>
 
@@ -186,11 +187,11 @@ img { display: block; }
         잘 자는 사람이<br/>
         <em>잠을 바꾼다.</em>
       </h1>
-      <p class="lead">쇼룸 매니저는 파는 사람이 아니라 수면 컨설턴트. 한 사람의 잠을 바꾸는 매장 운영.</p>
+      <p class="lead">전 직원이 같은 언어로 제품을 이해하고, 쇼룸·백화점은 한 사람의 잠을 바꾸는 컨설팅으로 응답합니다.</p>
       <div class="meta">
-        <div><b>76</b> Slides</div>
-        <div><b>2</b> Sessions</div>
-        <div><b>9</b> Parts</div>
+        <div><b>3</b> Sessions</div>
+        <div><b>전사</b> · 쇼룸·백화점</div>
+        <div><b>v2.2</b> · 2026-05-22</div>
       </div>
     </div>
   </section>
@@ -199,17 +200,17 @@ img { display: block; }
     <div class="container">
       <div class="section-label reveal">
         <div>
-          <div class="num">— The Two Sessions</div>
-          <h2>두 개의 흐름.</h2>
+          <div class="num">— The Three Sessions</div>
+          <h2>세 개의 흐름.</h2>
         </div>
-        <p class="sub">먼저 제품과 안전성으로 신뢰의 토대를 만들고, 그 다음 실제 응대·세일즈·운영으로 매장을 움직입니다.</p>
+        <p class="sub">전사 공통 교육으로 토대를 세우고, 쇼룸·백화점은 응대·세일즈·운영을 익히고, 마지막으로 제품 라인업 교육자료로 깊이를 더합니다.</p>
       </div>
 
       <div class="session-grid">
         <a class="session-card reveal" href="session1.html">
           <div class="num"><em>Session</em> 01</div>
-          <h3>우리는<br/><em>잘 잔다.</em></h3>
-          <div class="desc">Product · Certification · Safety</div>
+          <h3><em>전사 교육</em></h3>
+          <div class="desc">All Staff · Product · Safety</div>
           <ul class="parts">
             <li><b>Part 01</b>오가렌과 3대 브랜드</li>
             <li><b>Part 02</b>매트리스 마스터하기</li>
@@ -217,15 +218,15 @@ img { display: block; }
             <li><b>Part 04</b>인증 & 안전성</li>
           </ul>
           <div class="footer">
-            <span class="count">38 Slides</span>
+            <span class="count">43 Slides</span>
             <span class="go">Enter →</span>
           </div>
         </a>
 
         <a class="session-card reveal" href="session2.html">
           <div class="num"><em>Session</em> 02</div>
-          <h3>그래서<br/><em>잘 안내한다.</em></h3>
-          <div class="desc">Consulting · Service · Operation</div>
+          <h3><em>쇼룸·백화점</em><br/>세일즈 교육</h3>
+          <div class="desc">Showroom · Sales · Service · Ops</div>
           <ul class="parts">
             <li><b>Part 01</b>고객 응대 프로세스</li>
             <li><b>Part 02</b>세일즈 스크립트 & 거절 처리</li>
@@ -235,6 +236,22 @@ img { display: block; }
           </ul>
           <div class="footer">
             <span class="count">44 Slides</span>
+            <span class="go">Enter →</span>
+          </div>
+        </a>
+
+        <a class="session-card reveal" href="session3.html">
+          <div class="num"><em>Session</em> 03</div>
+          <h3><em>쇼룸·백화점</em><br/>교육자료</h3>
+          <div class="desc">Product Library · Lineup · Reference</div>
+          <ul class="parts">
+            <li><b>Part 01</b>신규 라인업 3.3.3 (시그·하이·스테·밸)</li>
+            <li><b>Part 02</b>경쟁사 비교 자료</li>
+            <li><b>Part 03</b>브랜드 · 안전성 공통 자료</li>
+            <li><b>Part 04</b>침대 · 베개</li>
+          </ul>
+          <div class="footer">
+            <span class="count">PDF Library</span>
             <span class="go">Enter →</span>
           </div>
         </a>
@@ -267,6 +284,21 @@ img { display: block; }
           <div class="name">통합본 (전체)</div>
           <div class="arrow">↓ Download</div>
         </a>
+        <a class="dl-item" href="assets/download/세일즈매뉴얼_제품편_v1_20260410.pdf" download>
+          <div class="lbl">Reference · PDF · 49p</div>
+          <div class="name">세일즈매뉴얼 — 제품편</div>
+          <div class="arrow">↓ Download</div>
+        </a>
+        <a class="dl-item" href="assets/download/세일즈매뉴얼_서비스편_v1_20260410.pdf" download>
+          <div class="lbl">Reference · PDF · 54p</div>
+          <div class="name">세일즈매뉴얼 — 서비스편 (카톡 멘트)</div>
+          <div class="arrow">↓ Download</div>
+        </a>
+        <a class="dl-item" href="https://drive.google.com/file/d/1hFw2eZO1sg5dHzqX6pqE95YaUHbbB9zR/view" target="_blank" rel="noopener">
+          <div class="lbl">Reference · Drive Link · 88p</div>
+          <div class="name">매장 운영 매뉴얼 (35MB)</div>
+          <div class="arrow">↗ Open Drive</div>
+        </a>
       </div>
     </div>
   </section>
@@ -274,7 +306,7 @@ img { display: block; }
   <footer class="footer">
     <div class="container">
       <div class="brand-mark">OGAREN <em>Manager Education</em></div>
-      <div>v2.1 · last updated 2026-05-22 · © DX팀</div>
+      <div>v2.2 · last updated 2026-05-22 · © DX팀</div>
     </div>
   </footer>
   <script>
