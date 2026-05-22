@@ -1,5 +1,5 @@
 {
-  "total": 81,
+  "total": 231,
   "toc": [
     {
       "id": "cover",
@@ -374,50 +374,826 @@
       ]
     },
     {
-      "id": "hardy",
-      "label": "Part 11 · 하디 침대",
+      "id": "product_frame",
+      "label": "Part 11 · 제품편 — 프레임",
       "from": 72,
-      "to": 81,
+      "to": 89,
       "slides": [
         {
           "num": 72,
-          "title": "HADI 하디"
+          "title": "제품편 · p32",
+          "src_page": 32
         },
         {
           "num": 73,
-          "title": "KEYWORD"
+          "title": "제품편 · p33",
+          "src_page": 33
         },
         {
           "num": 74,
-          "title": "헤드형"
+          "title": "제품편 · p34",
+          "src_page": 34
         },
         {
           "num": 75,
-          "title": "CLASSY WOOD"
+          "title": "제품편 · p35",
+          "src_page": 35
         },
         {
           "num": 76,
-          "title": "HPM (High Pressure Melamine)"
+          "title": "제품편 · p36",
+          "src_page": 36
         },
         {
           "num": 77,
-          "title": "- SE0 자재등급의 자작 합판에 HPM 고압 접착"
+          "title": "제품편 · p37",
+          "src_page": 37
         },
         {
           "num": 78,
-          "title": "합판의 옹이, 표면의 점 등은 합판과, HPM 소재 특성상"
+          "title": "제품편 · p38",
+          "src_page": 38
         },
         {
           "num": 79,
-          "title": "사이드 테이블"
+          "title": "제품편 · p39",
+          "src_page": 39
         },
         {
           "num": 80,
-          "title": "구성품"
+          "title": "제품편 · p40",
+          "src_page": 40
         },
         {
           "num": 81,
-          "title": "구성 박스"
+          "title": "제품편 · p41",
+          "src_page": 41
+        },
+        {
+          "num": 82,
+          "title": "제품편 · p42",
+          "src_page": 42
+        },
+        {
+          "num": 83,
+          "title": "제품편 · p43",
+          "src_page": 43
+        },
+        {
+          "num": 84,
+          "title": "제품편 · p44",
+          "src_page": 44
+        },
+        {
+          "num": 85,
+          "title": "제품편 · p45",
+          "src_page": 45
+        },
+        {
+          "num": 86,
+          "title": "제품편 · p46",
+          "src_page": 46
+        },
+        {
+          "num": 87,
+          "title": "제품편 · p47",
+          "src_page": 47
+        },
+        {
+          "num": 88,
+          "title": "제품편 · p48",
+          "src_page": 48
+        },
+        {
+          "num": 89,
+          "title": "제품편 · p49",
+          "src_page": 49
+        }
+      ]
+    },
+    {
+      "id": "service_manual",
+      "label": "Part 12 · 서비스 응대 매뉴얼 v1",
+      "from": 90,
+      "to": 143,
+      "slides": [
+        {
+          "num": 90,
+          "title": "서비스편 · p1",
+          "src_page": 1
+        },
+        {
+          "num": 91,
+          "title": "서비스편 · p2",
+          "src_page": 2
+        },
+        {
+          "num": 92,
+          "title": "서비스편 · p3",
+          "src_page": 3
+        },
+        {
+          "num": 93,
+          "title": "서비스편 · p4",
+          "src_page": 4
+        },
+        {
+          "num": 94,
+          "title": "서비스편 · p5",
+          "src_page": 5
+        },
+        {
+          "num": 95,
+          "title": "서비스편 · p6",
+          "src_page": 6
+        },
+        {
+          "num": 96,
+          "title": "서비스편 · p7",
+          "src_page": 7
+        },
+        {
+          "num": 97,
+          "title": "서비스편 · p8",
+          "src_page": 8
+        },
+        {
+          "num": 98,
+          "title": "서비스편 · p9",
+          "src_page": 9
+        },
+        {
+          "num": 99,
+          "title": "서비스편 · p10",
+          "src_page": 10
+        },
+        {
+          "num": 100,
+          "title": "서비스편 · p11",
+          "src_page": 11
+        },
+        {
+          "num": 101,
+          "title": "서비스편 · p12",
+          "src_page": 12
+        },
+        {
+          "num": 102,
+          "title": "서비스편 · p13",
+          "src_page": 13
+        },
+        {
+          "num": 103,
+          "title": "서비스편 · p14",
+          "src_page": 14
+        },
+        {
+          "num": 104,
+          "title": "서비스편 · p15",
+          "src_page": 15
+        },
+        {
+          "num": 105,
+          "title": "서비스편 · p16",
+          "src_page": 16
+        },
+        {
+          "num": 106,
+          "title": "서비스편 · p17",
+          "src_page": 17
+        },
+        {
+          "num": 107,
+          "title": "서비스편 · p18",
+          "src_page": 18
+        },
+        {
+          "num": 108,
+          "title": "서비스편 · p19",
+          "src_page": 19
+        },
+        {
+          "num": 109,
+          "title": "서비스편 · p20",
+          "src_page": 20
+        },
+        {
+          "num": 110,
+          "title": "서비스편 · p21",
+          "src_page": 21
+        },
+        {
+          "num": 111,
+          "title": "서비스편 · p22",
+          "src_page": 22
+        },
+        {
+          "num": 112,
+          "title": "서비스편 · p23",
+          "src_page": 23
+        },
+        {
+          "num": 113,
+          "title": "서비스편 · p24",
+          "src_page": 24
+        },
+        {
+          "num": 114,
+          "title": "서비스편 · p25",
+          "src_page": 25
+        },
+        {
+          "num": 115,
+          "title": "서비스편 · p26",
+          "src_page": 26
+        },
+        {
+          "num": 116,
+          "title": "서비스편 · p27",
+          "src_page": 27
+        },
+        {
+          "num": 117,
+          "title": "서비스편 · p28",
+          "src_page": 28
+        },
+        {
+          "num": 118,
+          "title": "서비스편 · p29",
+          "src_page": 29
+        },
+        {
+          "num": 119,
+          "title": "서비스편 · p30",
+          "src_page": 30
+        },
+        {
+          "num": 120,
+          "title": "서비스편 · p31",
+          "src_page": 31
+        },
+        {
+          "num": 121,
+          "title": "서비스편 · p32",
+          "src_page": 32
+        },
+        {
+          "num": 122,
+          "title": "서비스편 · p33",
+          "src_page": 33
+        },
+        {
+          "num": 123,
+          "title": "서비스편 · p34",
+          "src_page": 34
+        },
+        {
+          "num": 124,
+          "title": "서비스편 · p35",
+          "src_page": 35
+        },
+        {
+          "num": 125,
+          "title": "서비스편 · p36",
+          "src_page": 36
+        },
+        {
+          "num": 126,
+          "title": "서비스편 · p37",
+          "src_page": 37
+        },
+        {
+          "num": 127,
+          "title": "서비스편 · p38",
+          "src_page": 38
+        },
+        {
+          "num": 128,
+          "title": "서비스편 · p39",
+          "src_page": 39
+        },
+        {
+          "num": 129,
+          "title": "서비스편 · p40",
+          "src_page": 40
+        },
+        {
+          "num": 130,
+          "title": "서비스편 · p41",
+          "src_page": 41
+        },
+        {
+          "num": 131,
+          "title": "서비스편 · p42",
+          "src_page": 42
+        },
+        {
+          "num": 132,
+          "title": "서비스편 · p43",
+          "src_page": 43
+        },
+        {
+          "num": 133,
+          "title": "서비스편 · p44",
+          "src_page": 44
+        },
+        {
+          "num": 134,
+          "title": "서비스편 · p45",
+          "src_page": 45
+        },
+        {
+          "num": 135,
+          "title": "서비스편 · p46",
+          "src_page": 46
+        },
+        {
+          "num": 136,
+          "title": "서비스편 · p47",
+          "src_page": 47
+        },
+        {
+          "num": 137,
+          "title": "서비스편 · p48",
+          "src_page": 48
+        },
+        {
+          "num": 138,
+          "title": "서비스편 · p49",
+          "src_page": 49
+        },
+        {
+          "num": 139,
+          "title": "서비스편 · p50",
+          "src_page": 50
+        },
+        {
+          "num": 140,
+          "title": "서비스편 · p51",
+          "src_page": 51
+        },
+        {
+          "num": 141,
+          "title": "서비스편 · p52",
+          "src_page": 52
+        },
+        {
+          "num": 142,
+          "title": "서비스편 · p53",
+          "src_page": 53
+        },
+        {
+          "num": 143,
+          "title": "서비스편 · p54",
+          "src_page": 54
+        }
+      ]
+    },
+    {
+      "id": "store_ops_manual",
+      "label": "Part 13 · 매장 운영 매뉴얼 v1",
+      "from": 144,
+      "to": 231,
+      "slides": [
+        {
+          "num": 144,
+          "title": "운영편 · p1",
+          "src_page": 1
+        },
+        {
+          "num": 145,
+          "title": "운영편 · p2",
+          "src_page": 2
+        },
+        {
+          "num": 146,
+          "title": "운영편 · p3",
+          "src_page": 3
+        },
+        {
+          "num": 147,
+          "title": "운영편 · p4",
+          "src_page": 4
+        },
+        {
+          "num": 148,
+          "title": "운영편 · p5",
+          "src_page": 5
+        },
+        {
+          "num": 149,
+          "title": "운영편 · p6",
+          "src_page": 6
+        },
+        {
+          "num": 150,
+          "title": "운영편 · p7",
+          "src_page": 7
+        },
+        {
+          "num": 151,
+          "title": "운영편 · p8",
+          "src_page": 8
+        },
+        {
+          "num": 152,
+          "title": "운영편 · p9",
+          "src_page": 9
+        },
+        {
+          "num": 153,
+          "title": "운영편 · p10",
+          "src_page": 10
+        },
+        {
+          "num": 154,
+          "title": "운영편 · p11",
+          "src_page": 11
+        },
+        {
+          "num": 155,
+          "title": "운영편 · p12",
+          "src_page": 12
+        },
+        {
+          "num": 156,
+          "title": "운영편 · p13",
+          "src_page": 13
+        },
+        {
+          "num": 157,
+          "title": "운영편 · p14",
+          "src_page": 14
+        },
+        {
+          "num": 158,
+          "title": "운영편 · p15",
+          "src_page": 15
+        },
+        {
+          "num": 159,
+          "title": "운영편 · p16",
+          "src_page": 16
+        },
+        {
+          "num": 160,
+          "title": "운영편 · p17",
+          "src_page": 17
+        },
+        {
+          "num": 161,
+          "title": "운영편 · p18",
+          "src_page": 18
+        },
+        {
+          "num": 162,
+          "title": "운영편 · p19",
+          "src_page": 19
+        },
+        {
+          "num": 163,
+          "title": "운영편 · p20",
+          "src_page": 20
+        },
+        {
+          "num": 164,
+          "title": "운영편 · p21",
+          "src_page": 21
+        },
+        {
+          "num": 165,
+          "title": "운영편 · p22",
+          "src_page": 22
+        },
+        {
+          "num": 166,
+          "title": "운영편 · p23",
+          "src_page": 23
+        },
+        {
+          "num": 167,
+          "title": "운영편 · p24",
+          "src_page": 24
+        },
+        {
+          "num": 168,
+          "title": "운영편 · p25",
+          "src_page": 25
+        },
+        {
+          "num": 169,
+          "title": "운영편 · p26",
+          "src_page": 26
+        },
+        {
+          "num": 170,
+          "title": "운영편 · p27",
+          "src_page": 27
+        },
+        {
+          "num": 171,
+          "title": "운영편 · p28",
+          "src_page": 28
+        },
+        {
+          "num": 172,
+          "title": "운영편 · p29",
+          "src_page": 29
+        },
+        {
+          "num": 173,
+          "title": "운영편 · p30",
+          "src_page": 30
+        },
+        {
+          "num": 174,
+          "title": "운영편 · p31",
+          "src_page": 31
+        },
+        {
+          "num": 175,
+          "title": "운영편 · p32",
+          "src_page": 32
+        },
+        {
+          "num": 176,
+          "title": "운영편 · p33",
+          "src_page": 33
+        },
+        {
+          "num": 177,
+          "title": "운영편 · p34",
+          "src_page": 34
+        },
+        {
+          "num": 178,
+          "title": "운영편 · p35",
+          "src_page": 35
+        },
+        {
+          "num": 179,
+          "title": "운영편 · p36",
+          "src_page": 36
+        },
+        {
+          "num": 180,
+          "title": "운영편 · p37",
+          "src_page": 37
+        },
+        {
+          "num": 181,
+          "title": "운영편 · p38",
+          "src_page": 38
+        },
+        {
+          "num": 182,
+          "title": "운영편 · p39",
+          "src_page": 39
+        },
+        {
+          "num": 183,
+          "title": "운영편 · p40",
+          "src_page": 40
+        },
+        {
+          "num": 184,
+          "title": "운영편 · p41",
+          "src_page": 41
+        },
+        {
+          "num": 185,
+          "title": "운영편 · p42",
+          "src_page": 42
+        },
+        {
+          "num": 186,
+          "title": "운영편 · p43",
+          "src_page": 43
+        },
+        {
+          "num": 187,
+          "title": "운영편 · p44",
+          "src_page": 44
+        },
+        {
+          "num": 188,
+          "title": "운영편 · p45",
+          "src_page": 45
+        },
+        {
+          "num": 189,
+          "title": "운영편 · p46",
+          "src_page": 46
+        },
+        {
+          "num": 190,
+          "title": "운영편 · p47",
+          "src_page": 47
+        },
+        {
+          "num": 191,
+          "title": "운영편 · p48",
+          "src_page": 48
+        },
+        {
+          "num": 192,
+          "title": "운영편 · p49",
+          "src_page": 49
+        },
+        {
+          "num": 193,
+          "title": "운영편 · p50",
+          "src_page": 50
+        },
+        {
+          "num": 194,
+          "title": "운영편 · p51",
+          "src_page": 51
+        },
+        {
+          "num": 195,
+          "title": "운영편 · p52",
+          "src_page": 52
+        },
+        {
+          "num": 196,
+          "title": "운영편 · p53",
+          "src_page": 53
+        },
+        {
+          "num": 197,
+          "title": "운영편 · p54",
+          "src_page": 54
+        },
+        {
+          "num": 198,
+          "title": "운영편 · p55",
+          "src_page": 55
+        },
+        {
+          "num": 199,
+          "title": "운영편 · p56",
+          "src_page": 56
+        },
+        {
+          "num": 200,
+          "title": "운영편 · p57",
+          "src_page": 57
+        },
+        {
+          "num": 201,
+          "title": "운영편 · p58",
+          "src_page": 58
+        },
+        {
+          "num": 202,
+          "title": "운영편 · p59",
+          "src_page": 59
+        },
+        {
+          "num": 203,
+          "title": "운영편 · p60",
+          "src_page": 60
+        },
+        {
+          "num": 204,
+          "title": "운영편 · p61",
+          "src_page": 61
+        },
+        {
+          "num": 205,
+          "title": "운영편 · p62",
+          "src_page": 62
+        },
+        {
+          "num": 206,
+          "title": "운영편 · p63",
+          "src_page": 63
+        },
+        {
+          "num": 207,
+          "title": "운영편 · p64",
+          "src_page": 64
+        },
+        {
+          "num": 208,
+          "title": "운영편 · p65",
+          "src_page": 65
+        },
+        {
+          "num": 209,
+          "title": "운영편 · p66",
+          "src_page": 66
+        },
+        {
+          "num": 210,
+          "title": "운영편 · p67",
+          "src_page": 67
+        },
+        {
+          "num": 211,
+          "title": "운영편 · p68",
+          "src_page": 68
+        },
+        {
+          "num": 212,
+          "title": "운영편 · p69",
+          "src_page": 69
+        },
+        {
+          "num": 213,
+          "title": "운영편 · p70",
+          "src_page": 70
+        },
+        {
+          "num": 214,
+          "title": "운영편 · p71",
+          "src_page": 71
+        },
+        {
+          "num": 215,
+          "title": "운영편 · p72",
+          "src_page": 72
+        },
+        {
+          "num": 216,
+          "title": "운영편 · p73",
+          "src_page": 73
+        },
+        {
+          "num": 217,
+          "title": "운영편 · p74",
+          "src_page": 74
+        },
+        {
+          "num": 218,
+          "title": "운영편 · p75",
+          "src_page": 75
+        },
+        {
+          "num": 219,
+          "title": "운영편 · p76",
+          "src_page": 76
+        },
+        {
+          "num": 220,
+          "title": "운영편 · p77",
+          "src_page": 77
+        },
+        {
+          "num": 221,
+          "title": "운영편 · p78",
+          "src_page": 78
+        },
+        {
+          "num": 222,
+          "title": "운영편 · p79",
+          "src_page": 79
+        },
+        {
+          "num": 223,
+          "title": "운영편 · p80",
+          "src_page": 80
+        },
+        {
+          "num": 224,
+          "title": "운영편 · p81",
+          "src_page": 81
+        },
+        {
+          "num": 225,
+          "title": "운영편 · p82",
+          "src_page": 82
+        },
+        {
+          "num": 226,
+          "title": "운영편 · p83",
+          "src_page": 83
+        },
+        {
+          "num": 227,
+          "title": "운영편 · p84",
+          "src_page": 84
+        },
+        {
+          "num": 228,
+          "title": "운영편 · p85",
+          "src_page": 85
+        },
+        {
+          "num": 229,
+          "title": "운영편 · p86",
+          "src_page": 86
+        },
+        {
+          "num": 230,
+          "title": "운영편 · p87",
+          "src_page": 87
+        },
+        {
+          "num": 231,
+          "title": "운영편 · p88",
+          "src_page": 88
         }
       ]
     }

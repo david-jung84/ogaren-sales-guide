@@ -129,6 +129,35 @@ PARTS = [
     },
 ]
 
+# 신규 PDF 3종 (2026-05-22 추가)
+# - 제품편 v1: p2-26 라인업 + p27-31 타사비교는 세션 3 lineup/compete와 중복 → 제외
+#             p32-49 프레임 부분만 채택 (18p)
+# - 서비스편 v1: 전체 54p
+# - 운영편 v1: 전체 88p
+EXT_PARTS = [
+    {
+        "id": "product_frame",
+        "label": "Part 11 · 제품편 — 프레임",
+        "src_path": r"C:\Users\USER\Downloads\세일즈매뉴얼_제품part v1_20260410.pdf",
+        "page_range": (32, 49),
+        "titles_prefix": "제품편",
+    },
+    {
+        "id": "service_manual",
+        "label": "Part 12 · 서비스 응대 매뉴얼 v1",
+        "src_path": r"C:\Users\USER\Downloads\세일즈매뉴얼_서비스 part v1_20260410.pdf",
+        "page_range": (1, None),  # 전체
+        "titles_prefix": "서비스편",
+    },
+    {
+        "id": "store_ops_manual",
+        "label": "Part 13 · 매장 운영 매뉴얼 v1",
+        "src_path": r"C:\Users\USER\Downloads\매장 운영 매뉴얼_part v1_20260410.pdf",
+        "page_range": (1, None),  # 전체
+        "titles_prefix": "운영편",
+    },
+]
+
 
 def render_page_to_png(page: fitz.Page, out_path: Path):
     """16:9 PNG로 렌더링. 종횡비 다르면 검은 패딩."""
@@ -224,80 +253,38 @@ for part in PARTS:
     })
     print(f"  {part['id']}: slides {start} - {slide_idx - 1}  ({n}p)")
 
-# 하디 PPTX는 PowerPoint COM으로 따로 렌더
-pptx_path = DL / "11_hardy_bed_education.pptx"
-if pptx_path.exists():
-    try:
-        import pythoncom
-        import win32com.client
-        from pptx import Presentation
-
-        pythoncom.CoInitialize()
-        ppt_app = win32com.client.Dispatch("PowerPoint.Application")
-        ppt_app.Visible = 1
-        ppt_app.DisplayAlerts = 1
-
-        tmp_dir = OUT / "_hardy_tmp"
-        if tmp_dir.exists():
-            shutil.rmtree(tmp_dir)
-        tmp_dir.mkdir()
-
-        deck = ppt_app.Presentations.Open(str(pptx_path), WithWindow=False)
-        # 슬라이드 제목 추출
-        prs = Presentation(str(pptx_path))
-        hardy_titles = []
-        for i, sl in enumerate(prs.slides):
-            t = None
-            for shp in sl.shapes:
-                if shp.has_text_frame and shp.text_frame.text.strip():
-                    t = shp.text_frame.text.strip().split("\n")[0][:40]
-                    break
-            hardy_titles.append(t or f"하디 · {i+1}")
-        # 통째로 PNG export
-        deck.SaveAs(str(tmp_dir.resolve()), 18)  # 18 = ppSaveAsPNG
-        deck.Close()
-        ppt_app.Quit()
-        pythoncom.CoUninitialize()
-
-        # SaveAs는 폴더에 Slide1.PNG, Slide2.PNG... 생성
-        # 또는 같은 이름 폴더에 들어갈 수 있음 — 두 경우 모두 처리
-        candidate_dirs = [tmp_dir] + [p for p in tmp_dir.iterdir() if p.is_dir()]
-        png_files = []
-        for d in candidate_dirs:
-            png_files.extend(sorted(d.glob("Slide*.PNG")) + sorted(d.glob("슬라이드*.PNG")))
-        png_files = sorted(set(png_files), key=lambda p: int("".join(c for c in p.stem if c.isdigit()) or "0"))
-
-        start = slide_idx
-        slide_list = []
-        for i, src_png in enumerate(png_files):
-            out_p = OUT / f"slide_{slide_idx:03d}.png"
-            # 16:9 캔버스로 정규화
-            img = Image.open(src_png).convert("RGB")
-            ratio = img.width / img.height
-            want = W / H
-            if ratio > want:
-                new_w = W; new_h = int(W / ratio)
-            else:
-                new_h = H; new_w = int(H * ratio)
-            img = img.resize((new_w, new_h), Image.LANCZOS)
-            canvas = Image.new("RGB", (W, H), (15, 15, 18))
-            canvas.paste(img, ((W - new_w) // 2, (H - new_h) // 2))
-            canvas.save(out_p, "PNG", optimize=True)
-            title = hardy_titles[i] if i < len(hardy_titles) else f"하디 · {i+1}"
-            slide_list.append({"num": slide_idx, "title": title})
-            slide_idx += 1
-        shutil.rmtree(tmp_dir)
-        if slide_list:
-            toc.append({
-                "id": "hardy",
-                "label": "Part 11 · 하디 침대",
-                "from": start,
-                "to": slide_idx - 1,
-                "slides": slide_list,
-            })
-            print(f"  hardy: slides {start} - {slide_idx - 1}  ({len(slide_list)}p)")
-    except Exception as e:
-        print(f"하디 PPTX 렌더 실패: {e}")
+# 하디는 단종 → 미렌더링 (2026-05-22)
+# 신규 PDF 3종 처리 (제품편 프레임 부분 + 서비스편 + 운영편)
+for ext in EXT_PARTS:
+    src = Path(ext["src_path"])
+    if not src.exists():
+        print(f"[SKIP] {src} 없음"); continue
+    doc = fitz.open(src)
+    n = doc.page_count
+    p0, p1 = ext["page_range"]
+    if p1 is None:
+        p1 = n
+    p0 = max(1, p0); p1 = min(n, p1)
+    prefix = ext["titles_prefix"]
+    start = slide_idx
+    slide_list = []
+    for src_page in range(p0, p1 + 1):
+        page = doc.load_page(src_page - 1)
+        out_p = OUT / f"slide_{slide_idx:03d}.png"
+        render_page_to_png(page, out_p)
+        # 라벨: "운영편 · p23" 식
+        title = f"{prefix} · p{src_page}"
+        slide_list.append({"num": slide_idx, "title": title, "src_page": src_page})
+        slide_idx += 1
+    doc.close()
+    toc.append({
+        "id": ext["id"],
+        "label": ext["label"],
+        "from": start,
+        "to": slide_idx - 1,
+        "slides": slide_list,
+    })
+    print(f"  {ext['id']}: slides {start} - {slide_idx - 1}  ({p1 - p0 + 1}p {prefix} p{p0}-p{p1})")
 
 total = slide_idx - 1
 print(f"\nTOTAL: {total} slides")
