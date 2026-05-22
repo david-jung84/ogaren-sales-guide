@@ -3362,6 +3362,36 @@ makeDivider("09", "배송 실무 가이드",
 
 
 // ============================================================
+// APPENDIX — 경쟁사 비교 자료 (세션 2 전용 부록 / 영업 기밀)
+// ============================================================
+const appendixPages = [
+  { src: "appendix_pdf_extract/page_01.png", label: "표지" },
+  { src: "appendix_pdf_extract/page_02.png", label: "12종 시리즈별 특장 + 경도 정리" },
+  { src: "appendix_pdf_extract/page_03.png", label: "시그니처 vs 시몬스 · 씰리" },
+  { src: "appendix_pdf_extract/page_04.png", label: "하이브리드 vs 코웨이 · 씰리 · 베스트슬립" },
+  { src: "appendix_pdf_extract/page_05.png", label: "스테이블 vs 씰리 · 코웨이 · 에이스 · 한셀 · 일룸" },
+  { src: "appendix_pdf_extract/page_06.png", label: "밸런스드 vs 에이스 · 코웨이 · 일룸" },
+];
+
+appendixPages.forEach((p, i) => {
+  const s = pres.addSlide();
+  s.background = { color: C.white };
+  // 상단 어펜딕스 라벨
+  s.addText(`APPENDIX  ·  ${i+1} / ${appendixPages.length}  ·  ${p.label}`, {
+    x: 0.5, y: 0.35, w: 9, h: 0.3,
+    fontSize: 11, color: C.gold, fontFace: FONT_H,
+    bold: true, charSpacing: 3, margin: 0
+  });
+  // PDF 페이지 풀 임베드 (16:9 contain → 8.18 x 4.6 centered)
+  s.addImage({
+    path: p.src,
+    x: 0.3, y: 0.8, w: 9.4, h: 4.5,
+    sizing: { type: "contain", w: 9.4, h: 4.5 }
+  });
+  addFooter(s, 0, "Appendix · 경쟁사 비교 (영업 기밀)");
+});
+
+// ============================================================
 // SLIDE 70 — 마무리 (우리의 약속)
 // ============================================================
 {

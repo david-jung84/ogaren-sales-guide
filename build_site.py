@@ -53,7 +53,8 @@ SESSION2_TOC = [
     {"id": "part3",  "label": "Part 3 · TOP 매니저 케이스 & 모범 사례", "from": 20, "to": 28},
     {"id": "part4",  "label": "Part 4 · 운영 · KPI · 부록", "from": 29, "to": 33},
     {"id": "part5",  "label": "Part 5 · 배송 실무 가이드", "from": 34, "to": 37},
-    {"id": "end",    "label": "마무리",               "from": 38, "to": 99},
+    {"id": "appendix", "label": "Appendix · 경쟁사 비교 자료", "from": 38, "to": 43},
+    {"id": "end",    "label": "마무리",               "from": 44, "to": 99},
 ]
 
 

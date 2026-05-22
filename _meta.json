@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21",
+  "updated": "2026-05-22",
   "session1": {
     "count": 38,
     "titles": [
@@ -44,7 +44,7 @@
     ]
   },
   "session2": {
-    "count": 38,
+    "count": 44,
     "titles": [
       "OGAREN EDUCATION PROGRAM",
       "HOW TO USE",
@@ -83,6 +83,12 @@
       "ELEVATOR GUIDE",
       "STAIRS · LIFT · WINDOW",
       "OHOUSE TRACKING",
+      "APPENDIX · 1 / 6 · 표지",
+      "APPENDIX · 2 / 6 · 12종 시리즈별 특장 + 경도 정리",
+      "APPENDIX · 3 / 6 · 시그니처 vs 시몬스 · 씰리",
+      "APPENDIX · 4 / 6 · 하이브리드 vs 코웨이 · 씰리 · 베스트슬립",
+      "APPENDIX · 5 / 6 · 스테이블 vs 씰리 · 코웨이 · 에이스 · 한셀 · 일룸",
+      "APPENDIX · 6 / 6 · 밸런스드 vs 에이스 · 코웨이 · 일룸",
       "CLOSING · 우리의 약속"
     ]
   }
